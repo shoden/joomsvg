@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+    <!-- Name of the Module -->
+        <name>SVG Menu</name> 
+ 
+    <!-- Name of the Author -->
+        <author>Juan Roldan Ruiz</author> 
+ 
+    <!-- Version Date of the Module -->
+        <creationDate>2010-11-15</creationDate> 
+ 
+    <!-- Copyright information -->
+        <copyright></copyright> 
+ 
+    <!-- License Information -->
+        <license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+        <authorEmail>juan.roldan@gmail.com</authorEmail> 
+ 
+    <!-- Author's website -->
+        <authorUrl></authorUrl> 
+ 
+    <!-- Module version number -->
+        <version>0.1</version> 
+ 
+    <!-- Description of what the module does -->
+        <description>Generate a dynamic SVG menu</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+        <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+                <filename module="mod_svgmenu">mod_svgmenu.php</filename>
+                <filename>index.html</filename>
+                <filename>helper.php</filename>
+                <filename>tmpl/default.php</filename>
+                <filename>tmpl/index.html</filename>
+        </files>
+ 
+    <languages>
+        <!-- Any language files included with the module -->
+        <language tag="es-ES">es-ES.mod_svgmenu.ini</language>
+    </languages>
+ 
+    <!-- Optional parameters -->
+        <params>
+			<param name="moduleclass_sfx" type="text" default="" label="MODULE CLASS SUFFIX" description="MODULE CLASS SUFFIX" />
+            <param name="@spacer" type="spacer" default="" label="" description="" />
+			<param name="mymenu" type="menu" default="mainmenu" label="SELECT A MENU" description="SELECT A MENU" />
+    </params>
+</install>
