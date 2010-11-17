@@ -6,7 +6,7 @@
     <?php $i=0; foreach ($items as $item) { ?>
     <tr>
       <td><?php echo $item->name;   ?></td> 
-      <td><?php echo nl2br($item->params); ?></td>
+      <td><?php echo $item->img;   ?></td> 
     </tr>
     <?php if(++$i%4==0) echo "<tr><td><br/><br/></td></tr>"; ?>
     <?php } ?>
