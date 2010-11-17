@@ -35,11 +35,16 @@
                 <filename>helper.php</filename>
                 <filename>tmpl/default.php</filename>
                 <filename>tmpl/index.html</filename>
+                <filename>images/boton1.svg</filename>
+                <filename>images/index.html</filename>
+                <filename>js/funciones.js</filename>
+                <filename>js/jquery-1.4.2.min.js</filename>
+                <filename>js/index.html</filename>
         </files>
  
     <languages>
         <!-- Any language files included with the module -->
-        <language tag="es-ES">es-ES.mod_svgmenu.ini</language>
+        <language tag="es-ES">language/es-ES.mod_svgmenu.ini</language>
     </languages>
  
     <!-- Optional parameters -->
