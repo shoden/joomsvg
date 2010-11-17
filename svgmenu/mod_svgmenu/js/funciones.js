@@ -4,8 +4,8 @@ function hola() {
   alert (cadena);
 }
 
-var W3CDOM = (document.createElement && document.getElementsByTagName);
-window.onload   = init;
+//var W3CDOM = (document.createElement && document.getElementsByTagName);
+//window.onload   = init;
 function init(evt) {
 	Resize();
 }
@@ -31,6 +31,4 @@ function Resize() {
   SVGscale(x/480);
 }
 
-window.onresize=Resize;
-
-document.getElementById('debug').innerHTML = "h";
+//window.onresize=Resize;
