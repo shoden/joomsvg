@@ -35,7 +35,10 @@
                 <filename>helper.php</filename>
                 <filename>tmpl/default.php</filename>
                 <filename>tmpl/index.html</filename>
-                <filename>images/boton1.svg</filename>
+                <filename>images/boton_amarillo.svg</filename>
+                <filename>images/boton_azul.svg</filename>
+                <filename>images/boton_rojo.svg</filename>
+                <filename>images/boton_verde.svg</filename>
                 <filename>images/index.html</filename>
                 <filename>js/funciones.js</filename>
                 <filename>js/jquery-1.4.2.min.js</filename>
