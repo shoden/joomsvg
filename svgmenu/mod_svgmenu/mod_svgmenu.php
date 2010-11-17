@@ -13,10 +13,10 @@ $iconsize = $params->get('iconsize');
 $items = ModSvgMenuHelper::getItems($menutype);
 
 $colors = array();
-$colors[0]  = "rojo";
-$colors[1]  = "amarillo";
-$colors[2]  = "verde";
-$colors[3]  = "azul";
+$colors[0]  = "red";
+$colors[1]  = "yellow";
+$colors[2]  = "green";
+$colors[3]  = "blue";
 
 // include the template for display
 require(JModuleHelper::getLayoutPath('mod_svgmenu'));
