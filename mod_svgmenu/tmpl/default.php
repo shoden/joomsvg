@@ -1,10 +1,13 @@
 <?php defined('_JEXEC') or die('Restricted access'); // no direct access ?>
 <?php echo JText::_('ELEMENTS'); ?>
-<ul>
+<?php //echo JText::sprintf('ICON', $item->name); ?>
+
+<table border=1>
     <?php $i=0; foreach ($items as $item) { ?>
-    <li>
-        <?php echo JText::sprintf('ICON', $item->name); ?>
-    <?php if(++$i%4==0) echo "<br/>"; ?>
-    </li>
+    <tr>
+      <td><?php echo $item->name;   ?></td> 
+      <td><?php echo nl2br($item->params); ?></td>
+    </tr>
+    <?php if(++$i%4==0) echo "<tr><td><br/><br/></td></tr>"; ?>
     <?php } ?>
-</ul>
+</table>

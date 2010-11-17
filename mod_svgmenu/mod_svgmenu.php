@@ -10,7 +10,7 @@ $menutype = $params->get('mymenu');
  
 // get the items to display from the helper
 $items = ModSvgMenuHelper::getItems($menutype);
- 
+
 // include the template for display
 require(JModuleHelper::getLayoutPath('mod_svgmenu'));
 ?>
