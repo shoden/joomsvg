@@ -26,7 +26,7 @@ class ModSvgMenuHelper extends modMainMenuHelper
     {
         // get a reference to the database
         $db = &JFactory::getDBO();
-        $query = 'SELECT name, params FROM `#__menu` WHERE parent=0 AND menutype="'. $menutype .'" ORDER BY ordering;'; 
+        $query = 'SELECT id, name, link, type, parent, params FROM `#__menu` WHERE menutype="'. $menutype .'" AND published=1 ORDER BY ordering;'; 
         $db->setQuery($query);
         $items = ($items = $db->loadObjectList())?$items:array();
         
