@@ -6,16 +6,17 @@ require_once JPATH_BASE.DS.'modules'.DS.'mod_mainmenu'.DS.'helper.php';
 class ModSvgMenuHelper extends modMainMenuHelper 
 {
 	/**
-	 * Retrieve menu_image parameter
+	 * Retrieve menu_image value from $item->params
 	 */
 	public function getImage($string)
 	{
 		$a = explode("\n",$string);
 		$b = preg_grep("/^menu_image=[a-zA-Z0-9._-]+/", $a);
 		
+		$img ="";
 		foreach($b as $c)
 			$img = preg_replace("/menu_image=([a-zA-Z0-9._-]+)/", "$1", $c);
-		
+
 		return $img;
 	}
 
