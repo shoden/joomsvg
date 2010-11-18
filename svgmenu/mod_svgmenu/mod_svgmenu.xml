@@ -56,5 +56,6 @@
             <param name="@spacer" type="spacer" default="" label="" description="" />
 			<param name="mymenu" type="menu" default="mainmenu" label="SELECT A MENU" description="SELECT A MENU" />
 			<param name="iconsize" type="text" default="16" label="ICON SIZE" description="ICON SIZE DESC" />
+			<param name="iconmargin" type="text" default="10" label="ICON MARGIN" description="ICON MARGIN DESC" />
     </params>
 </install>

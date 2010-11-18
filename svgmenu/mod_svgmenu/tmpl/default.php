@@ -13,8 +13,12 @@
 		<param name="name" value="<?php echo $item->name; ?>">
 		<param name="link" value="<?php echo $item->link; ?>">
 	  </object>
-
-	  <img src="images/stories/ext_com.png" />
+	  
+	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
+	    height="<?php echo $iconmargin; ?>%" width="<?php echo $iconmargin; ?>%">
+		<param name="src" value="blank.svg">
+		<param name="wmode" value="transparent">
+	  </object>
 
 <?php } ?>
 
