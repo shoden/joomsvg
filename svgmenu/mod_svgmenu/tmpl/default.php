@@ -5,9 +5,16 @@
 <script type="text/javascript" src="modules/mod_svgmenu/js/funciones.js"></script>
 
 <?php $i=0; foreach($items as $item){ ?>
-	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/button_<?php echo $colors[$i++]; ?>.svg" height="<?php echo $iconsize; ?>%" width="<?php echo $iconsize; ?>%">
+
+	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/button_blue.svg"
+	  height="<?php echo $iconsize; ?>%" width="<?php echo $iconsize; ?>%">
 		<param name="src" value="boton1.svg">
 		<param name="wmode" value="transparent">
+		<param name="name" value="<?php echo $item->name; ?>">
+		<param name="link" value="<?php echo $item->link; ?>">
 	  </object>
+
+	  <img src="images/stories/ext_com.png" />
+
 <?php } ?>
-</table>
+
