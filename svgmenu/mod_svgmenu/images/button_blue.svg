@@ -6,7 +6,7 @@
     xml:space="preserve"
     id="blue_button"
     width="100%" height="100%"
-    viewBox="-30 0 150 150">
+    viewBox="-45 0 180 180">
 <a xlink:href="param(link)" target="_new">
 <g role="button" cursor="pointer">
 	<g id="Layer_4">
@@ -66,9 +66,9 @@
 			C74.5,81.5,69.8,83.45,64.3,83.45H25.5c-5.5,0-10.2-1.95-14.1-5.851C7.5,73.7,5.55,69,5.55,63.5V24.7c0-5.5,1.95-10.2,5.851-14.1
 			C15.3,6.7,20,4.75,25.5,4.75h38.8C69.8,4.75,74.5,6.7,78.4,10.6z"/>
 	</g>
-				<g id="Layer_txt">
-			<text x="75" y="110" 
-        font-family="Verdana" font-size="18" fill="black" content-value="param(name)"
+	<g id="Layer_txt">
+			<text x="45" y="110" 
+        font-family="Verdana" font-size="param(fontsize)" fill="black" content-value="param(name)"
          style="dominant-baseline: central; text-anchor:middle;">boton</text> 
 		</g>
 </g>

@@ -9,6 +9,7 @@ require_once(dirname(__FILE__).DS.'helper.php');
 $menutype = $params->get('mymenu');
 $iconsize = $params->get('iconsize');
 $iconmargin = $params->get('iconmargin');
+$iconfontsize = $params->get('iconfontsize');
  
 // get the items to display from the helper
 $items = ModSvgMenuHelper::getItems($menutype);

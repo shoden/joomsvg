@@ -13,12 +13,13 @@
 		<param name="wmode" value="transparent">
 		<param name="name" value="<?php echo $items[$i]->name; ?>">
 		<param name="link" value="<?php echo JURI::base() . $items[$i]->link; ?>">
+		<param name="fontsize" value="<?php echo $iconfontsize; ?>">
 	  </object>
 	  
 	  <!-- space -->
 	  <?php if($i < (count($items)-1)){ ?>
 	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
-	    height="<?php echo $iconmargin; ?>%" width="<?php echo $iconmargin; ?>%">
+	    height="1%" width="<?php echo $iconmargin; ?>%">
 		<param name="src" value="blank.svg">
 		<param name="wmode" value="transparent">
 	  </object>
