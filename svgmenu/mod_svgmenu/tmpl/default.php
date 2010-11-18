@@ -11,7 +11,7 @@
 		<param name="src" value="boton1.svg">
 		<param name="wmode" value="transparent">
 		<param name="name" value="<?php echo $item->name; ?>">
-		<param name="link" value="<?php echo $item->link; ?>">
+		<param name="link" value="<?php echo JURI::base() . $item->link; ?>">
 	  </object>
 	  
 	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
