@@ -9,9 +9,9 @@
 	// TODO: Icon from DB
 	$icon = "world.svg";
 
-	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth . "&h=" . $iconheight . "&color="
+	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth . "&h=" . $iconheight . "&c="
 	. $colors[$i] . "&t=" . $items[$i]->name //. "&link=" . $items[$i]->link
-	. "&icon=" . $icon . "&ts=" . $iconfontsize;
+	. "&i=" . $icon . "&ts=" . $iconfontsize;
 	
 ?>
 

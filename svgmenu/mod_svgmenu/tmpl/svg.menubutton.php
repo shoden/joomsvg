@@ -22,7 +22,7 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
 echo '<defs>';
 
 // Button
-$buttonFile = '../images/button_'. $_GET["color"] .'.svg';
+$buttonFile = '../images/button_'. $_GET["c"] .'.svg';
 if( file_exists($buttonFile) )
 	include($buttonFile);
 
@@ -36,7 +36,7 @@ echo '<g id="text">
 
 // Icon 
  
-$iconFile = '../icons/'. $_GET["icon"];
+$iconFile = '../icons/'. $_GET["i"];
 if( file_exists($iconFile) )
 	include($iconFile);
 
