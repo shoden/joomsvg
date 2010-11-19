@@ -7,11 +7,11 @@
 <?php for($i=0; $i<count($items); $i++) { //$i=0; foreach($items as $item){ 
 	
 	// TODO: Icon from DB
-	$icon = "world.svg";
+//	$icon = "world.svg";
 
 	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth . "&h=" . $iconheight . "&c="
 	. $colors[$i] . "&t=" . $items[$i]->name //. "&link=" . $items[$i]->link
-	. "&i=" . $icon . "&ts=" . $iconfontsize;
+	. "&i=" . $items[$i]->img . "&ts=" . $iconfontsize;
 	
 ?>
 
