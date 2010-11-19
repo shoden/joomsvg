@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" 
-    xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:svg="http://www.w3.org/2000/svg"
-    xml:space="preserve"
-    id="yellow_button"
-    width="100%" height="100%"
-    viewBox="0 0 90 90">
-<g>
+<g id="button">
 	<g id="Layer_4">
 		
 			<radialGradient id="SVGID_1_" cx="27.3169" cy="795.6494" r="49.95" gradientTransform="matrix(1 0 0 1 17 -751)" gradientUnits="userSpaceOnUse">
@@ -78,4 +69,3 @@
 			C15.3,6.7,20,4.75,25.5,4.75h38.8C69.8,4.75,74.5,6.7,78.4,10.6z"/>
 	</g>
 </g>
-</svg>

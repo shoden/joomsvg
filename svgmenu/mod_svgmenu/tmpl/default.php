@@ -4,10 +4,19 @@
 <script type="text/javascript" src="modules/mod_svgmenu/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="modules/mod_svgmenu/js/funciones.js"></script>
 
-<?php for($i=0; $i<count($items); $i++) { //$i=0; foreach($items as $item){ ?>
+<?php for($i=0; $i<count($items); $i++) { //$i=0; foreach($items as $item){ 
+	
+	// TODO: Icon from DB
+	$icon = "world.svg";
+
+	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?color="
+	. $colors[$i] . "&text=" . $items[$i]->name //. "&link=" . $items[$i]->link
+	. "&icon=" . $icon;
+	
+?>
 
 	  <!-- button -->
-	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/button_blue.svg"
+	  <object type="image/svg+xml" data="<?php echo $svg; ?>"
 	  height="<?php echo $iconsize; ?>%" width="<?php echo $iconsize; ?>%">
 		<param name="src" value="boton1.svg">
 		<param name="wmode" value="transparent">
