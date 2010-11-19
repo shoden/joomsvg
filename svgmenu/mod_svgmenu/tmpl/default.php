@@ -16,7 +16,7 @@
 ?>
 
 	  <!-- button -->
-	  <object type="image/svg+xml" data="<?php echo $svg; ?>"
+	  <object id="button-<?php echo $i; ?>" type="image/svg+xml" data="<?php echo $svg; ?>"
 	  height="<?php echo $iconsize; ?>%" width="<?php echo $iconsize; ?>%">
 		<param name="src" value="boton1.svg">
 		<param name="wmode" value="transparent">
