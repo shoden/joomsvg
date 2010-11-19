@@ -8,6 +8,8 @@ require_once(dirname(__FILE__).DS.'helper.php');
 // get parameters from the module's configuration
 $menutype = $params->get('mymenu');
 $iconsize = $params->get('iconsize');
+$iconwidth = $params->get('iconwidth');
+$iconheight = $params->get('iconheight');
 $iconmargin = $params->get('iconmargin');
 $iconfontsize = $params->get('iconfontsize');
  
