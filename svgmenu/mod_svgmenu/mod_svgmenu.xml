@@ -1,64 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <install type="module" version="1.5.0">
-    <!-- Name of the Module -->
-        <name>SVG Menu</name> 
- 
-    <!-- Name of the Author -->
-        <author>Juan Roldan Ruiz</author> 
- 
-    <!-- Version Date of the Module -->
-        <creationDate>2010-11-15</creationDate> 
- 
-    <!-- Copyright information -->
-        <copyright>Copyright (C) 2010 CPMTI. S.L. All rights reserved.</copyright> 
- 
-    <!-- License Information -->
-        <license>GPL 2.0</license> 
- 
-    <!-- Author's email address -->
-        <authorEmail>jroldan@cpmti.es</authorEmail> 
- 
-    <!-- Author's website -->
-        <authorUrl></authorUrl> 
- 
-    <!-- Module version number -->
-        <version>0.1</version> 
- 
-    <!-- Description of what the module does -->
-        <description>Generate a dynamic SVG menu</description>
- 
-    <!-- Listing of all files that should be installed for the module to function -->
-        <files>
-        <!-- The "module" attribute signifies that this is the main controller file -->
-                <filename module="mod_svgmenu">mod_svgmenu.php</filename>
-                <filename>index.html</filename>
-                <filename>helper.php</filename>
-                <filename>tmpl/default.php</filename>
-                <filename>tmpl/index.html</filename>
-                <filename>images/button_yellow.svg</filename>
-                <filename>images/button_blue.svg</filename>
-                <filename>images/button_red.svg</filename>
-                <filename>images/button_green.svg</filename>
-                <filename>images/index.html</filename>
-                <filename>js/jquery-1.4.2.min.js</filename>
-                <filename>js/funciones.js</filename>
-                <filename>js/index.html</filename>
-        </files>
- 
-    <languages>
-        <!-- Any language files included with the module -->
-        <language tag="es-ES">language/es-ES.mod_svgmenu.ini</language>
-    </languages>
- 
-    <!-- Optional parameters -->
-        <params>
-			<param name="moduleclass_sfx" type="text" default="" label="MODULE CLASS SUFFIX" description="MODULE CLASS SUFFIX" />
-			<param name="mymenu" type="menu" default="mainmenu" label="SELECT A MENU" description="SELECT A MENU" />
-            <param name="@spacer" type="spacer" default="" label="" description="" />    
-			<param name="iconwidth" type="text" default="120" label="ICON WIDTH" description="ICON WIDTH DESC" />
-			<param name="iconheight" type="text" default="150" label="ICON HEIGHT" description="ICON HEIGHT DESC" />
-			<param name="iconsize" type="text" default="16" label="ICON SIZE" description="ICON SIZE DESC" />
-			<param name="iconmargin" type="text" default="10" label="ICON MARGIN" description="ICON MARGIN DESC" />
-			<param name="iconfontsize" type="text" default="12" label="ICON FONT SIZE" description="ICON FONT SIZE DESC" />
-		</params>
+  <!-- Name of the Module -->
+  <name>MODULE TITLE</name> 
+
+  <!-- Name of the Author -->
+  <author>Juan Roldan Ruiz</author> 
+
+  <!-- Version Date of the Module -->
+  <creationDate>2010-11-15</creationDate> 
+
+  <!-- Copyright information -->
+  <copyright>Copyright (C) 2010 CPMTI. S.L. All rights reserved.</copyright> 
+
+  <!-- License Information -->
+  <license>GPL 3.0</license> 
+
+  <!-- Author's email address -->
+  <authorEmail>jroldan@cpmti.es</authorEmail> 
+
+  <!-- Author's website -->
+  <authorUrl></authorUrl> 
+
+  <!-- Module version number -->
+  <version>0.1.1</version> 
+
+  <!-- Description of what the module does -->
+  <description>MODULE DESC</description>
+
+  <!-- Listing of all files that should be installed for the module to function -->
+  <files>
+    <!-- The "module" attribute signifies that this is the main controller file -->
+    <filename module="mod_svgmenu">mod_svgmenu.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename>icons/box.svg</filename>
+    <filename>icons/world.svg</filename>
+    <filename>images/blank.svg</filename>
+    <filename>images/button_blue.svg</filename>
+    <filename>images/button_green.svg</filename>
+    <filename>images/button_red.svg</filename>
+    <filename>images/button_yellow.svg</filename>
+    <filename>images/index.html</filename>
+    <filename>js/funciones.js</filename>
+    <filename>js/index.html</filename>
+    <filename>js/jquery-1.4.2.min.js</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+    <filename>tmpl/svg.menubutton.php</filename>
+  </files>
+
+  <!-- Language files -->
+  <languages>
+    <language tag="es-ES">language/es-ES.mod_svgmenu.ini</language>
+  </languages>
+
+  <!-- Optional parameters -->
+  <params>
+    <param name="moduleclass_sfx" type="text" default="" label="MODULE CLASS SUFFIX" description="MODULE CLASS SUFFIX" />
+    <param name="mymenu" type="menu" default="mainmenu" label="SELECT A MENU" description="SELECT A MENU" />
+    <param name="@spacer" type="spacer" default="" label="" description="" />    
+    <param name="iconwidth" type="text" default="120" label="ICON WIDTH" description="ICON WIDTH DESC" />
+    <param name="iconheight" type="text" default="150" label="ICON HEIGHT" description="ICON HEIGHT DESC" />
+    <param name="iconsize" type="text" default="16" label="ICON SIZE" description="ICON SIZE DESC" />
+    <param name="iconmargin" type="text" default="10" label="ICON MARGIN" description="ICON MARGIN DESC" />
+    <param name="iconfontsize" type="text" default="12" label="ICON FONT SIZE" description="ICON FONT SIZE DESC" />
+  </params>
 </install>
