@@ -1,0 +1,9 @@
+
+
+Hack de Joomla:
+
+- Hay que añadir la extensión ".svg" al listado de imágenes de Joomla. Para eso,
+  la línea 38 del archivo libraries/joomla/html/parameter/element/imagelist.php
+quedaría así:
+
+$filter = '\.svg$|\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$';
