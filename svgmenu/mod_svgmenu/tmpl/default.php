@@ -14,7 +14,10 @@
 	    height="1%" width="<?php echo $iconmargin; ?>%">
 		<param name="src" value="blank.svg">
 		<param name="wmode" value="transparent">
-	  </object><?php for($i=0; $i<count($items) && $i<4; $i++) {
+	  </object><?php
+
+	// Menu buttons
+	for($i=0; $i<count($items) && $i<4; $i++) {
 
 	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth
 	     . "&h=" . $iconheight . "&c=" . $colors[$i] . "&t=" . 
@@ -25,12 +28,13 @@
 		space($iconmargin);
 	}
 
+	// Filling spaces
 	for($i=$i; $i<4; $i++){
 		space($iconsize); 
 		space($iconmargin); 
-	
 	}
 	
+	// More button
 	$svg = "modules/mod_svgmenu/tmpl/svg.morebutton.php?w=" . $iconwidth
 	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . 
 	     $iconfontsize; //. "&link=" . $items[$i]->link	
