@@ -13,7 +13,6 @@
 		<param name="link" value="<?php echo JURI::base() . $items[$i]->link; ?>">
 		<param name="fontsize" value="<?php echo $iconfontsize; ?>">
 	  </object>
-	  
 	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
 	    height="1%" width="<?php echo $iconmargin; ?>%">
 		<param name="src" value="blank.svg">

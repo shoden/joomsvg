@@ -24,8 +24,7 @@ $colors[3]  = "blue";
 
 function button($id, $data, $size)
 {
-	echo '<!-- button -->
-	  <object id="button-'. $id .' type="image/svg+xml" data="'. 
+	echo '<object id="button-'. $id .' type="image/svg+xml" data="'. 
 	  $data .'" height="'. $size .'%" width="'. $size .'%">
 		<param name="wmode" value="transparent">
 	  </object>';
@@ -33,8 +32,7 @@ function button($id, $data, $size)
  
  function space($size)
 {
-	echo '<!-- space -->
-	      <object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
+	echo '<object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
 	    height="1%" width="'. $size .'%">
 		<param name="src" value="blank.svg">
 		<param name="wmode" value="transparent">
