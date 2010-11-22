@@ -4,19 +4,8 @@
 <script type="text/javascript" src="modules/mod_svgmenu/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="modules/mod_svgmenu/js/funciones.js"></script>
 
-<?php for($i=0; $i<count($items); $i++) { //$i=0; foreach($items as $item){ 
-	
-	// TODO: Icon from DB
-//	$icon = "world.svg";
-
-	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth . "&h=" . $iconheight . "&c="
-	. $colors[$i] . "&t=" . $items[$i]->name //. "&link=" . $items[$i]->link
-	. "&i=" . $items[$i]->img . "&ts=" . $iconfontsize;
-	
-?>
-
-	  <!-- button -->
-	  <object id="button-<?php echo $i; ?>" type="image/svg+xml" data="<?php echo $svg; ?>"
+	  <!-- left space -->
+	  <object id="button-<?php echo $i; ?>" type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
 	  height="<?php echo $iconsize; ?>%" width="<?php echo $iconsize; ?>%">
 		<param name="src" value="boton1.svg">
 		<param name="wmode" value="transparent">
@@ -25,14 +14,32 @@
 		<param name="fontsize" value="<?php echo $iconfontsize; ?>">
 	  </object>
 	  
-	  <!-- space -->
-	  <?php if($i < (count($items)-1)){ ?>
 	  <object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
 	    height="1%" width="<?php echo $iconmargin; ?>%">
 		<param name="src" value="blank.svg">
 		<param name="wmode" value="transparent">
 	  </object>
-	  <?php } ?>
+	  
+<?php for($i=0; $i<count($items) && $i<4; $i++) {
 
-<?php } ?>
+	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth
+	     . "&h=" . $iconheight . "&c=" . $colors[$i] . "&t=" . 
+	     $items[$i]->name . "&i=" . $items[$i]->img . "&ts=" . 
+	     $iconfontsize; //. "&link=" . $items[$i]->link
+	
+		button($i, $svg, $iconsize);
+		space($iconmargin);
+	}
 
+	for($i=$i; $i<4; $i++){
+		space($iconsize); 
+		space($iconmargin); 
+	
+	}
+	
+	$svg = "modules/mod_svgmenu/tmpl/svg.morebutton.php?w=" . $iconwidth
+	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . 
+	     $iconfontsize; //. "&link=" . $items[$i]->link	
+	button( "more", $svg, $iconsize);
+	?>
+	
