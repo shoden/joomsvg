@@ -4,8 +4,7 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?> ';
 
 $width  = intval( (isset($_GET['w']))?$_GET['w']:120 );
 $height = intval( (isset($_GET['h']))?$_GET['h']:150 );
-
-//$width = 120; $height = 150;
+$goto = $_GET['link'];
 
 // SVG header
 echo '<svg xmlns="http://www.w3.org/2000/svg" 
@@ -15,11 +14,19 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     id="blue_button"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'">
-<a xlink:href="'. $_GET['link'] .'" target="_new">
+<a onclick="go()">
 <g role="button" cursor="pointer">';
+
+// Link script
+echo '<script type="application/ecmascript"> <![CDATA[
+    function go() { 
+		parent.location.href = "'. urldecode($_GET["link"]) .'";}
+  ]]> </script>';
 
 // Elements definition
 echo '<defs>';
+
+echo '';
 
 // Button
 $buttonFile = '../images/button_'. $_GET["c"] .'.svg';
@@ -28,7 +35,7 @@ if( file_exists($buttonFile) )
 
 
 // Text
-echo '<g id="text">
+echo '<g onclick="go()" id="text">
 			<text font-family="Verdana" font-size="'. $_GET["ts"].'" 
 			fill="black" content-value="'. $_GET["t"].'"
          style="dominant-baseline: central; text-anchor:middle;">'
