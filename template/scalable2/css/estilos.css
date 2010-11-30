@@ -52,14 +52,23 @@ body {
   height:90%;
   background: transparent;	
 }
-.barra_mod{
-  position:relative;
-  float:left;
-  margin-top:.15em;
-  margin-left:.2em;
-  width:15%;
-  height:90%;
-  background: transparent;	
+ .barra_mod1{
+	position:relative;
+	float:left;
+	margin-top:.15em;
+	margin-left:5%;
+	width:60%;
+	height:90%;
+	background: transparent;	
+}
+ .barra_mod2{
+	position:relative;
+	float:left;
+	margin-top:.15em;
+	margin-left:.2em;
+	width:15%;
+	height:90%;
+	background: transparent;	
 }
 .barra_superior{
  	position:relative;
@@ -77,33 +86,23 @@ body {
 	-ms-border-radius-bottomleft: 2em;
 	-ms-border-radius-bottomright: 2em;
 }
-.menu{
-  margin: 2% auto;
-  width:83%;
-  min-height:20%;
-  max-height:86%;
-  background: transparent;
-}
-.mainheader{
-	margin: 2% auto 0%;
-	width:83%;
-	height:4%;
-	background: transparent url(../images/transp2.png) repeat;
-	border-top:1px solid #c1b4c1;
-	border-right:1px solid #c1b4c1; 
-	border-left:1px solid #c1b4c1;  
-	padding: 0 1% 0 1%;
-	overflow:hidden;
+.volver{
+	margin-top: 2%;
+	width:8%;
+	height:15%;
+	background: transparent;
+	float:left;
+	padding-left:2%;
+	
 }
 .main{
- 	margin: 0% auto;
-	width:83%;
-	min-height:42%;
-	max-height:50%;
-	background: transparent url(../images/transp1.png) repeat;
-	border:1px solid #c1b4c1; 
-	padding: .5% 1% .5% 1%;
+	
+	margin-top:2%;
+	width:80%;
+	height:85%;
+	background: transparent;
 	overflow:hidden;
+	float:left;
 }
 div {font-size: 63%;}
 div#page {}
