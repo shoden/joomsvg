@@ -47,6 +47,7 @@
     <filename>tmpl/default.php</filename>
     <filename>tmpl/index.html</filename>
     <filename>tmpl/svg.menubutton.php</filename>
+    <filename>tmpl/svg.morebutton.php</filename>
   </files>
 
   <!-- Language files -->
