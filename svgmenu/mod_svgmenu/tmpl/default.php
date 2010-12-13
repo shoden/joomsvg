@@ -3,18 +3,20 @@
 <?php //echo JText::sprintf('ICON', $item->name); ?>
 <script type="text/javascript" src="modules/mod_svgmenu/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="modules/mod_svgmenu/js/funciones.js"></script>
-<div id="menu0">
+<div id="capa0">
 <?php
 		space($iconsize); 
 		space($iconmargin);	
 
 	// Menu buttons
 	for($i=0; $i<count($items) && $i<4; $i++) {
+	$icontype = ($items[$i]->link=="#") ? 0 : 1;
 
 	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth
 	     . "&h=" . $iconheight . "&c=" . $colors[$i] . "&t=" . 
 	     $items[$i]->name . "&i=" . $items[$i]->img . "&ts=" . 
-	     $iconfontsize . "&link=" . urlencode(JURI::base() . $items[$i]->link);
+	     $iconfontsize . "&blink=" . urlencode(JURI::base()) ."&link=" . 
+	     urlencode($items[$i]->link) . "&y=" . $icontype . "&id=" . $i;
 	
 		button($i, $svg, $iconsize);
 		space($iconmargin);
@@ -33,6 +35,6 @@
 	button( "more", $svg, $iconsize);
 	?>
 </div>
-<div id="menu1"><?php button($i, $svg, $iconsize); ?></div>
-<div id="menu2"><?php button($i, $svg, $iconsize); ?></div>
-<div id="menu3"><?php button($i, $svg, $iconsize); ?></div>
+<div id="capa1" style="height:0px;visibility:hidden"></div>
+<div id="capa2" style="height:0px;visibility:hidden"></div>
+<div id="capa3" style="height:0px;visibility:hidden"></div>

@@ -4,7 +4,9 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?> ';
 
 $width  = intval( (isset($_GET['w']))?$_GET['w']:120 );
 $height = intval( (isset($_GET['h']))?$_GET['h']:150 );
-$goto = $_GET['link'];
+//$goto = $_GET['blink'] . rawurlencode(str_replace("%3F","?",$_GET['link']));
+$goto = $_GET['blink'] . str_replace("%3F","?", rawurlencode($_GET['link']));
+$action = ($_GET["y"]==0) ? "openSubmenu(". $_GET['id'] .")" : "go(\"". $goto ."\")";
 
 // SVG header
 echo '<svg xmlns="http://www.w3.org/2000/svg" 
@@ -14,13 +16,17 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     id="blue_button"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'">
-<a onclick="go()">
+<a onclick=\''. $action .'\'>
 <g role="button" cursor="pointer">';
 
 // Link script
 echo '<script type="application/ecmascript"> <![CDATA[
-    function go() { 
-		parent.location.href = "'. urldecode($_GET["link"]) .'";}
+    function go(url) { 
+		parent.location.href = url;
+	}
+    function openSubmenu(id){
+		alert("Abrir submenu: " + id);
+	}
   ]]> </script>';
 
 // Elements definition
@@ -33,9 +39,8 @@ $buttonFile = '../images/button_'. $_GET["c"] .'.svg';
 if( file_exists($buttonFile) )
 	include($buttonFile);
 
-
 // Text
-echo '<g onclick="go()" id="text">
+echo '<g id="text">
 			<text font-family="Verdana" font-size="'. $_GET["ts"].'" 
 			fill="black" content-value="'. $_GET["t"].'"
          style="dominant-baseline: central; text-anchor:middle;">'
