@@ -20,12 +20,15 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
 <g role="button" cursor="pointer">';
 
 // Link script
-echo '<script type="application/ecmascript"> <![CDATA[
-    function go(url) { 
+
+echo '<script type="application/ecmascript"> <![CDATA[';
+include("ajax.js");
+echo'    function go(url) { 
 		parent.location.href = url;
 	}
     function openSubmenu(id){
-		alert("Abrir submenu: " + id);
+		//ajax(1,id);
+		ajax();
 	}
   ]]> </script>';
 

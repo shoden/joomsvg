@@ -35,6 +35,6 @@
 	button( "more", $svg, $iconsize);
 	?>
 </div>
-<div id="capa1" style="height:0px;visibility:hidden"></div>
-<div id="capa2" style="height:0px;visibility:hidden"></div>
-<div id="capa3" style="height:0px;visibility:hidden"></div>
+<div id="capa1"></div>
+<div id="capa2"></div>
+<div id="capa3"></div>
