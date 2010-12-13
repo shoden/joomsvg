@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5.0" type="component">
+     <name>Menú SVG</name>
+     <version>0.0.1</version>
+    <description>Genera un menú SVG dinámico</description>
+    <files>
+          <filename component="com_svgmenu">com_svgmenu.php</filename> 
+    </files>
+</install>
