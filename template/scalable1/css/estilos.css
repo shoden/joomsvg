@@ -84,25 +84,30 @@ body {
   max-height:86%;
   background: transparent;
 }
-#menu0{
+#capa0{
   height: 24%;
   width: 100%;
-  background-color: #F00;
+  background-color: #CCC;
+  z-index:0;
 }
-#menu1{
+#capa1{
   height: 24%;
   width: 100%;
-  background-color: #0F0;
+  background-color: #DDD;
+  z-index:0;
+  position: relative;
 }
-#menu2{
+#capa2{
   height: 24%;
   width: 100%;
-  background-color: #00F;
+  background-color: #EEE;
+  z-index:0;
 }
-#menu3{
+#capa3{
   height: 24%;
   width: 100%;
-  background-color: #F0F;
+  background-color: #FFF;
+  z-index:0;
 }
 .mainheader{
 	margin: 2% auto 0%;
@@ -114,8 +119,12 @@ body {
 	border-left:1px solid #c1b4c1;  
 	padding: 0 1% 0 1%;
 	overflow:hidden;
+	z-index:100;
+	position: relative;
 }
 .main{
+	z-index:100;
+	position: relative;
  	margin: 0% auto;
 	width:83%;
 	min-height:42%;
