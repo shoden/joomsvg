@@ -3,6 +3,7 @@
 <?php //echo JText::sprintf('ICON', $item->name); ?>
 <script type="text/javascript" src="modules/mod_svgmenu/js/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="modules/mod_svgmenu/js/funciones.js"></script>
+<div id="menu0">
 <?php
 		space($iconsize); 
 		space($iconmargin);	
@@ -31,5 +32,7 @@
 	     $iconfontsize; //. "&link=" . $items[$i]->link	
 	button( "more", $svg, $iconsize);
 	?>
-	
-	
+</div>
+<div id="menu1"><?php button($i, $svg, $iconsize); ?></div>
+<div id="menu2"><?php button($i, $svg, $iconsize); ?></div>
+<div id="menu3"><?php button($i, $svg, $iconsize); ?></div>

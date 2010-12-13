@@ -84,6 +84,26 @@ body {
   max-height:86%;
   background: transparent;
 }
+#menu0{
+  height: 24%;
+  width: 100%;
+  background-color: #F00;
+}
+#menu1{
+  height: 24%;
+  width: 100%;
+  background-color: #0F0;
+}
+#menu2{
+  height: 24%;
+  width: 100%;
+  background-color: #00F;
+}
+#menu3{
+  height: 24%;
+  width: 100%;
+  background-color: #F0F;
+}
 .mainheader{
 	margin: 2% auto 0%;
 	width:83%;
