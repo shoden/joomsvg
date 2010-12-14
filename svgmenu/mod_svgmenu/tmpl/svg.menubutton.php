@@ -49,8 +49,7 @@ echo '<g id="text">
          style="dominant-baseline: central; text-anchor:middle;">'
          . $_GET["t"].'</text></g>';
 
-// Icon 
- 
+// Icon
 $iconFile = '../icons/'. $_GET["i"];
 if( file_exists($iconFile) )
 	include($iconFile);
