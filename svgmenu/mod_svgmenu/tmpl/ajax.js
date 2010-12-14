@@ -21,7 +21,7 @@ function prueba(){
 }
 
 //Función que se llama cada vez que se pulsa una de las imágenes y rellena y pone visible la siguiente capa
-function ajax(capa, id){
+function ajax(capa, id, iconsize){
 //function ajax(capa, id){
 	
   //Llamada AJAX para crear carpeta
@@ -34,7 +34,7 @@ function ajax(capa, id){
   ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
  
   //envio la variable id por post
-  ajax.send("id="+id);  
+  ajax.send("id="+id+"&iconsize="+iconsize);  
   
   ajax.onreadystatechange=function()
 	{
@@ -43,9 +43,9 @@ function ajax(capa, id){
 			  siguiente_capa= capa+1;
 			  //alert(ajax.responseText);
 			  //Separo los elementos que he enviado desde el php en un vector
-			  var a = ajax.responseText.split('$');
+			  //var a = ajax.responseText.split('$');
 			  
-			  parent.document.getElementById("capa1").innerHTML=a[0] + " - " + a[1];
+			  parent.document.getElementById("capa1").innerHTML=ajax.responseText;//a[0] + " - " + a[1];
 			  
 			  /*
 			  if (capa < 5){ 

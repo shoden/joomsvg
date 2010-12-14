@@ -27,7 +27,6 @@ echo'    function go(url) {
 		parent.location.href = url;
 	}
     function openSubmenu(id){
-		//ajax(1,id);
 		ajax();
 	}
   ]]> </script>';
