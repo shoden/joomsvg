@@ -14,16 +14,13 @@
       <div id="fondoA" class="fondoA" >
         <div id="fondoB" class="fondoB" >
           <div id="capa_fondo" class="capa_fondo" >
-          <div class="barra_superior2" >
             <div class="barra_superior" >
-            
               <div class="logo">
               		<jdoc:include type="modules" name="logo" />
               </div>
               <div class="barra_title">
              	 Observatorio Dependencia Universidad de Ja&eacute;n
               </div>
-            </div>
             </div>
             <div class="volver1">
                  <jdoc:include type="modules" name="volver1" />
