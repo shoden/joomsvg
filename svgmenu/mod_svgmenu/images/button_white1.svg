@@ -1,0 +1,32 @@
+<g id="button">
+<radialGradient id="SVGID_1_" cx="43.6538" cy="52.5732" r="30.666" fx="46.1195" fy="50.7693" gradientUnits="userSpaceOnUse">
+	<stop  offset="0.0072" style="stop-color:#DBDBDB"/>
+	<stop  offset="0.5092" style="stop-color:#BFBFBF"/>
+	<stop  offset="0.865" style="stop-color:#A3A3A3"/>
+</radialGradient>
+<path fill="url(#SVGID_1_)" d="M42.287,20.85c0.867-1.3,1.75-1.934,2.65-1.9c0.899-0.034,1.782,0.566,2.649,1.8l29.95,41.45
+	c3.867,5.333,3.134,8-2.2,8h-60.7c-5.333,0-6.066-2.667-2.2-8l21.95-30.3l-0.2,0.25L42.287,20.85z"/>
+<g id="trianglelight">
+	<g id="trianglelight_1_">
+		<g id="Layer_1_3_">
+			
+				<radialGradient id="SVGID_2_" cx="-8044.0615" cy="99665.4766" r="303.1881" gradientTransform="matrix(4.222525e-11 -0.9405 -0.1472 -6.608779e-12 14689.5156 -7508.0884)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0" style="stop-color:#FFFFFF"/>
+				<stop  offset="0.5216" style="stop-color:#FFFFFF;stop-opacity:0.5765"/>
+				<stop  offset="0.6" style="stop-color:#FFFFFF;stop-opacity:0"/>
+				<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+			</radialGradient>
+			<path fill="url(#SVGID_2_)" d="M44.954,21.001c0.844-0.032,1.676,0.533,2.489,1.693l28.17,38.983
+				c3.637,5.018,2.947,7.525-2.068,7.525H16.457c-5.017,0-5.705-2.508-2.069-7.525l20.645-28.497l-0.188,0.235l7.617-10.628
+				C43.275,21.566,44.106,20.97,44.954,21.001z"/>
+		</g>
+	</g>
+	<g id="trianglelight_2_" opacity="0.45">
+		<g id="Layer_1_2_">
+			<path fill="#FFFFFF" d="M44.954,21.001c0.844-0.032,1.676,0.533,2.489,1.693l28.17,38.983c3.637,5.018,2.947,7.525-2.068,7.525
+				H16.457c-5.017,0-5.705-2.508-2.069-7.525l20.645-28.497l-0.188,0.235l7.617-10.628C43.275,21.566,44.106,20.97,44.954,21.001z"
+				/>
+		</g>
+	</g>
+</g>
+</g>
