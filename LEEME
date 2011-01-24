@@ -22,10 +22,12 @@ INSTALACIÓN DEL MENÚ
 
 CREACIÓN DE MENÚ
 
-- Utilizar el gestor de menús de Joomla seleccionando el menú 'Menú SVG'.
+- Entrar en el backend de Joomla y hacer:
+  . Ir a 'Menús' > 'Menú SVG'.
+  . Crear los elementos del menú.
 
 - Para cada elemento debe definirse:
-  . Tipo. Los elementos del menú pueden ser de dos tipos:
+  . Tipo. Pueden ser de dos tipos:
     . Categoría. Elegir el tipo 'Enlace externo' y poner '#' en el destino.
     . Hipervínculo. Elegir cualquier tipo estándar de Joomla (artíćulo, componente, etc.).
   . Título. Título que aparecerá en el menú.
