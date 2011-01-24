@@ -34,9 +34,9 @@
 	
 	// More button
 	$svg = "modules/mod_svgmenu/tmpl/svg.morebutton.php?w=" . $iconwidth
-	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . 
-	     $iconfontsize; //. "&link=" . $items[$i]->link	
-	echo button( "more", $svg, $iconsize);
+	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . $iconfontsize
+	     . "&l=0" . "&total=". count($items) . "&current=1";
+	echo button( "more", $svg, $iconsize );
 ?>
 </div>
 <div id="capa1"></div>

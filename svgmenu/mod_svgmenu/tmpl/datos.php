@@ -61,50 +61,11 @@ if($num>0){
 	
 		// More button
 	$svg = "modules/mod_svgmenu/tmpl/svg.morebutton.php?w=" . $iconwidth
-	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . 
-	     $iconfontsize; //. "&link=" . $items[$i]->link	
+	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . $iconfontsize
+	     . "&l=". $layer . "&total=". count($items) . "&current=1"
+	     . "&id=" . $parentid;
 	echo button( "more", $svg, $iconsize);
 }
 else
 	echo "";
-
-//parse_str($row[1], $a);
-
-//echo utf8_encode($row[0])."$".$a['menu_image'];
-/*
-	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth
-	     . "&h=" . $iconheight . "&c=" . $colors[$i] . "&t=" . 
-	     "Hola" . "&i=" . "world.svg" . "&ts=" . 
-	     $iconfontsize . "&blink=" . urlencode($blink) ."&link=" . 
-	     urlencode($link) . "&y=" . $icontype . "&id=" . $i+10;
-	     */
-	   //echo $svg;
-	//$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=120&h=120&c=blue&t=Comunicación&i=world.svg&ts=13&blink=http%3A%2F%2F127.0.0.1%2F&link=%23&y=0&id=3";
-
-	//echo button($id+10, $svg, $iconsize);
-	/*
-	$more = "modules/mod_svgmenu/tmpl/svg.morebutton.php?w=" . $iconwidth
-	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . 
-	     $iconfontsize; //. "&link=" . $items[$i]->link	
-*/
-	//echo button( "more", $more, $iconsize);
-	
-	//$iconsize=15;
-	//$iconmargin=1;
-	/*
-	echo button(10, $svg, $iconsize);/* . 
-		   space($iconmargin) .
-	       button(11, $svg, $iconsize) .
-		   space($iconmargin) .
-	       button(12, $svg, $iconsize) . 
-		   space($iconmargin) .
-	       button(13, $svg, $iconsize);
-	      // button( "more", $more, $iconsize);
-	*/
-	
-	//	$my = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . 12. "&h=" . 12 . "&t=" . "Ms" . "&ts=" . 12; //. "&link=" . $items[$i]->link	
-	//echo button(65, $my, 12);
-
-	//echo "<object id=\"button-0 type=\"image/svg+xml\" data=\"modules/mod_svgmenu/tmpl/svg.menubutton.php?w=120&h=120&c=red&t=Proyectos&i=bibliography.svg&ts=13&blink=http%3A%2F%2Flocalhost%2F%7Ejuan%2Foduja%2Fweb%2F&link=%23&y=0&id=0\" height=\"12%\" width=\"12%\"><param name=\"wmode\" value=\"transparent\"></object>";
-
 ?>

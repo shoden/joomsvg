@@ -75,6 +75,16 @@ function upLevel(layer)
 		parent.document.getElementById("capa"+i).style.visibility = "hidden";
 }
 
+function moreLevel(id, layer, pages, page)
+{
+	alert(id + "," + layer + "," + pages + "," + page);
+	
+    for(i=layer+1;i<4;i++)
+		parent.document.getElementById("capa"+i).style.visibility = "hidden";
+	
+	ajax(id, layer);
+}
+
 //Función para crear un objeto de tipo AJAX
 function nuevoAjax()
 { 

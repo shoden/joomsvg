@@ -2,10 +2,15 @@
 
 echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?> ';
 
+$id  = intval( (isset($_GET['id']))?$_GET['id']:0 );
 $width  = intval( (isset($_GET['w']))?$_GET['w']:120 );
 $height = intval( (isset($_GET['h']))?$_GET['h']:150 );
-
-//$width = 120; $height = 150;
+$layer = intval( (isset($_GET['l']))?$_GET['l']:4 );
+$total = intval( (isset($_GET['total']))?$_GET['total']:4 );
+$current = intval( (isset($_GET['current']))?$_GET['current']:0 );
+$pages = ceil($total/4);
+$page  = $current;
+$action = "moreLevel($id, $layer, $pages, $page)";
 
 // SVG header
 echo '<svg xmlns="http://www.w3.org/2000/svg" 
@@ -15,8 +20,12 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     id="blue_button"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'">
-<a xlink:href="'. $_GET['link'] .'" target="_new">
+<a onclick="'. $action .'">
 <g role="button" cursor="pointer" style="opacity: 1.0">';
+
+echo '<script type="application/ecmascript"> <![CDATA[';
+include("ajax.js");
+echo' ]]> </script>';
 
 // Elements definition
 echo '<defs>';
@@ -26,13 +35,13 @@ $buttonFile = '../images/button_black.svg';
 if( file_exists($buttonFile) )
 	include($buttonFile);
 
-
 // Text
+$pagination = " ($page,$pages)";
 echo '<g id="text">
 			<text font-family="Verdana" font-size="'. $_GET["ts"].'" 
-			fill="black" content-value="'. $_GET["t"].'"
+			fill="black" content-value="'. $_GET["t"] . $pagination.'"
          style="dominant-baseline: central; text-anchor:middle;">'
-         . $_GET["t"].'</text></g>';
+         . $_GET["t"]. $pagination.'</text></g>';
 
 // Icon 
  
