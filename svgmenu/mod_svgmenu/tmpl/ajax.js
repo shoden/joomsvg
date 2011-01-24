@@ -17,7 +17,7 @@ function ajax(id, layer,pages,page)
       if(ajax.responseText != ""){
 			  parent.document.getElementById("mainheader").style.visibility = "hidden";
 			  parent.document.getElementById("main").style.visibility = "hidden";
-			  parent.document.getElementById("capa"+layer).style.visibility = "visible";
+			  parent.document.getElementById("capa"+layer).style.visibility = "hidden";
 			  parent.document.getElementById("capa"+layer).innerHTML=ajax.responseText;
 
 			  for(i=layer+1;i<=4&&layer<3;i++)
@@ -44,6 +44,12 @@ function moreLevel(id, layer, pages, page)
 	
   showpage = (page<pages) ? page+1 : 1;
 	ajax(id, layer, pages, showpage);
+}
+
+function showLevel(layer)
+{
+  //alert("layer: " + layer);
+  parent.document.getElementById("capa"+layer).style.visibility = "visible";
 }
 
 // Función para crear un objeto de tipo AJAX
