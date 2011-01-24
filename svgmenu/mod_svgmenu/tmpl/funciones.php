@@ -1,8 +1,13 @@
 <?php
 
+// Button colours
+$colors = array();
+$colors[0]  = "red";
+$colors[1]  = "yellow";
+$colors[2]  = "green";
+$colors[3]  = "blue";
 
 //Función PHP qe rellena el array "vector" de javascript con los elementos del menú cuyo padre tiene id=0
-
 function lista($id)
 {
 	include "conectar.php"; 		
@@ -22,22 +27,60 @@ function lista($id)
 
 }
 
+/**
+ * Generate a SVG button
+ * @param int $id button ID
+ * @param string $data SVG generator code
+ * @param int $size button size
+ * @return string SVG button code
+ */
 function button($id, $data, $size)
 {
-	echo '<object id="button-'. $id .' type="image/svg+xml" data="'. 
+	return '<object id="button-'. $id .'" type="image/svg+xml" data="'. 
 	  $data .'" height="'. $size .'%" width="'. $size .'%">
 		<param name="wmode" value="transparent">
-	  </object>';
+	  </object>
+	  ';
  }
  
+/**
+ * Generate a SVG blank space
+ * @param int $size space size
+ * @return string SVG space code
+ */ 
  function space($size)
 {
-	echo '<object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
+	return '<object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
 	    height="1%" width="'. $size .'%">
 		<param name="src" value="blank.svg">
 		<param name="wmode" value="transparent">
-	  </object>';
+	  </object>
+	  ';
  }
+ 
+function getImage($string)
+{
+	$a = explode("\n",$string);
+	$b = preg_grep("/^menu_image=[a-zA-Z0-9._-]+/", $a);
+	
+	$img ="";
+	foreach($b as $c)
+		$img = preg_replace("/menu_image=([a-zA-Z0-9._-]+)/", "$1", $c);
+
+	return $img;
+}
+
+function getParam($param, $string)
+{
+	$a = explode("\n",$string);
+	$b = preg_grep("/^".$param."=[a-zA-Z0-9._-]+/", $a);
+	
+	$p ="";
+	foreach($b as $c)
+		$p = preg_replace("/".$param."=([a-zA-Z0-9._-]+)/", "$1", $c);
+
+	return $p;
+}
 
 
 

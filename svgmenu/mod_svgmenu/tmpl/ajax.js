@@ -21,32 +21,37 @@ function prueba(){
 }
 
 //Función que se llama cada vez que se pulsa una de las imágenes y rellena y pone visible la siguiente capa
-function ajax(capa, id, iconsize){
-//function ajax(capa, id){
-	
+function ajax(id, layer){
+//	alert( "id:" + id + " layer:" + layer);
+
   //Llamada AJAX para crear carpeta
   var ajax=nuevoAjax();
-  var capa=1;
-  var id=65;
   
   // Abro la conexion, envio cabeceras correspondientes al uso de POST y envio los datos con el metodo send del objeto AJAX al php datos.php
   ajax.open("POST", "datos.php", true);
   ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
  
   //envio la variable id por post
-  ajax.send("id="+id+"&iconsize="+iconsize);  
-  
+  ajax.send("id="+id+"&layer="+layer);    
   ajax.onreadystatechange=function()
 	{
 	  if (ajax.readyState==4)
 		{	
-			  siguiente_capa= capa+1;
+			  next_layer = layer+1;
 			  //alert(ajax.responseText);
 			  //Separo los elementos que he enviado desde el php en un vector
 			  //var a = ajax.responseText.split('$');
-			  
-			  parent.document.getElementById("capa1").innerHTML=ajax.responseText;//a[0] + " - " + a[1];
-			  
+			//  res = ajax.responseText;
+			  if(ajax.responseText != ""){
+			  parent.document.getElementById("mainheader").style.visibility = "hidden";
+			  parent.document.getElementById("main").style.visibility = "hidden";
+			  parent.document.getElementById("capa"+layer).style.visibility = "visible";
+			  parent.document.getElementById("capa"+layer).innerHTML=ajax.responseText;//a[0] + " - " + a[1];
+
+			  for(i=layer+1;i<=4&&layer<3;i++)
+			     parent.document.getElementById("capa"+i).style.visibility = "hidden";
+
+		  }
 			  /*
 			  if (capa < 5){ 
 			  

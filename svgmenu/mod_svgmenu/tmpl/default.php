@@ -5,35 +5,39 @@
 <script type="text/javascript" src="modules/mod_svgmenu/js/funciones.js"></script>
 <div id="capa0">
 <?php
-		space($iconsize); 
-		space($iconmargin);	
+
+    include_once('funciones.php');
+
+	// Up button
+	echo space($iconsize); 
+	echo space($iconmargin);
 
 	// Menu buttons
 	for($i=0; $i<count($items) && $i<4; $i++) {
-	$icontype = ($items[$i]->link=="#") ? 0 : 1;
-
-	$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth
-	     . "&h=" . $iconheight . "&c=" . $colors[$i] . "&t=" . 
-	     $items[$i]->name . "&i=" . $items[$i]->img . "&ts=" . 
-	     $iconfontsize . "&blink=" . urlencode(JURI::base()) ."&link=" . 
-	     urlencode($items[$i]->link) . "&y=" . $icontype . "&id=" . $i;
+		$icontype = ($items[$i]->link=="#") ? 0 : 1;
+		$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=" . $iconwidth
+		    . "&h=" . $iconheight . "&c=" . $colors[$i] . "&t=" . 
+		    $items[$i]->name . "&i=" . $items[$i]->img . "&ts=" . 
+		    $iconfontsize . "&blink=" . urlencode(JURI::base()) ."&link=" . 
+		    urlencode($items[$i]->link) . "&y=" . $icontype . "&id=" . $items[$i]->id .
+		    "&is=" . $iconsize . "&l=1";
 	
-		button($i, $svg, $iconsize);
-		space($iconmargin);
+		echo button($i, $svg, $iconsize);
+		echo space($iconmargin);
 	}
 
 	// Filling spaces
 	for($i=$i; $i<4; $i++){
-		space($iconsize); 
-		space($iconmargin); 
+		echo space($iconsize); 
+		echo space($iconmargin); 
 	}
 	
 	// More button
 	$svg = "modules/mod_svgmenu/tmpl/svg.morebutton.php?w=" . $iconwidth
 	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . 
 	     $iconfontsize; //. "&link=" . $items[$i]->link	
-	button( "more", $svg, $iconsize);
-	?>
+	echo button( "more", $svg, $iconsize);
+?>
 </div>
 <div id="capa1"></div>
 <div id="capa2"></div>

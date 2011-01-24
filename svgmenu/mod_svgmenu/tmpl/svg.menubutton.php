@@ -4,9 +4,13 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?> ';
 
 $width  = intval( (isset($_GET['w']))?$_GET['w']:120 );
 $height = intval( (isset($_GET['h']))?$_GET['h']:150 );
+$iconsize = intval( (isset($_GET['is']))?$_GET['is']:13 );
+$layer = intval( (isset($_GET['l']))?$_GET['l']:1 );
+
 //$goto = $_GET['blink'] . rawurlencode(str_replace("%3F","?",$_GET['link']));
 $goto = $_GET['blink'] . str_replace("%3F","?", rawurlencode($_GET['link']));
-$action = ($_GET["y"]==0) ? "openSubmenu(". $_GET['id'] .")" : "go(\"". $goto ."\")";
+//$action = ($_GET["y"]==0) ? "openSubmenu(". $_GET['id'] .")" : "go(\"". $goto ."\")";
+$action = ($_GET["y"]==0) ? "ajax(". $_GET['id'] .", ".  $layer . ")" : "go(\"". $goto ."\")";
 
 // SVG header
 echo '<svg xmlns="http://www.w3.org/2000/svg" 
@@ -25,9 +29,6 @@ echo '<script type="application/ecmascript"> <![CDATA[';
 include("ajax.js");
 echo'    function go(url) { 
 		parent.location.href = url;
-	}
-    function openSubmenu(id){
-		ajax();
 	}
   ]]> </script>';
 

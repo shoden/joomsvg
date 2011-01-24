@@ -16,7 +16,7 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'">
 <a xlink:href="'. $_GET['link'] .'" target="_new">
-<g role="button" cursor="pointer" style="opacity: 0.2">';
+<g role="button" cursor="pointer" style="opacity: 1.0">';
 
 // Elements definition
 echo '<defs>';

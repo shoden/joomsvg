@@ -1,7 +1,7 @@
 <?php
 // Conecto con MySQL
 
-$conexion = mysql_connect("localhost", "root", "root$324$");
-mysql_select_db("joomla_1522", $conexion);
+$conexion = mysql_connect("localhost", "root", "jrr360");
+mysql_select_db("oduja", $conexion);
 
 ?>
