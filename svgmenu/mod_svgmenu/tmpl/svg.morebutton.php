@@ -6,9 +6,9 @@ $id  = intval( (isset($_GET['id']))?$_GET['id']:0 );
 $width  = intval( (isset($_GET['w']))?$_GET['w']:120 );
 $height = intval( (isset($_GET['h']))?$_GET['h']:150 );
 $layer = intval( (isset($_GET['l']))?$_GET['l']:4 );
-$total = intval( (isset($_GET['total']))?$_GET['total']:4 );
-$current = intval( (isset($_GET['current']))?$_GET['current']:0 );
-$pages = ceil($total/4);
+$total = intval( (isset($_GET['total']))?$_GET['total']:0 );
+$current = intval( (isset($_GET['current']))?$_GET['current']:1 );
+$pages = $total;
 $page  = $current;
 $action = "moreLevel($id, $layer, $pages, $page)";
 
