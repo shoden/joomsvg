@@ -1,9 +1,42 @@
+INSTALACIÓN DE LA PLANTILLA
 
+- Entrar en el backend de Joomla y hacer:
+  . Instalar la plantilla 'scalable0'.
+  . Definir la plantilla 'scalable0' como predeterminada.
 
-Hack de Joomla:
+INSTALACIÓN DEL MENÚ
 
-- Hay que añadir la extensión ".svg" al listado de imágenes de Joomla. Para eso,
-  la línea 38 del archivo libraries/joomla/html/parameter/element/imagelist.php
-quedaría así:
+- Entrar en el backend de Joomla y hacer:
+  . Crear un menú con nombre único 'svgmenu' y título 'Menú SVG'.
+  . Instalar el módulo 'mod_svmenu'. Colocarlo en la posición 'menu' y asociarle el menú 'svgmenu'.
 
-$filter = '\.svg$|\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$';
+- Editar el fichero modules/mod_svgmenu/tmpl/conectar.php con los datos de conexión MySQL.
+
+- Hacer este pequeño hack de Joomla:
+  . Hay que añadir la extensión ".svg" al listado de imágenes de Joomla. Para eso,
+    la línea 38 del archivo libraries/joomla/html/parameter/element/imagelist.php
+    quedaría así:
+      $filter = '\.svg$|\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$';
+
+- Copiar los iconos del menú (ficheros SVG) en la carpeta de Joomla 'images/stories'.
+
+CREACIÓN DE MENÚ
+
+- Utilizar el gestor de menús de Joomla seleccionando el menú 'Menú SVG'.
+
+- Para cada elemento debe definirse:
+  . Tipo. Los elementos del menú pueden ser de dos tipos:
+    . Categoría. Elegir el tipo 'Enlace externo' y poner '#' en el destino.
+    . Hipervínculo. Elegir cualquier tipo estándar de Joomla (artíćulo, componente, etc.).
+  . Título. Título que aparecerá en el menú.
+  . Padre. Su elemento padre en el menú.
+  . Menú de imágenes. Imagen SVG que será su icono en el menú.
+  . Estado. Habilitado o inhabilitado. 
+
+CONFIGURACIÓN DEL MENÚ
+
+- Entrar en el backend de Joomla y hacer:
+  . Ir a 'Extensiones' > 'Gestor de módulos'.
+  . Seleccionar 'Menú SVG'.
+  . Modificar los parámetros.
+  . Pulsar el botón 'Guardar'.

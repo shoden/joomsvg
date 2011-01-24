@@ -30,33 +30,6 @@
   <!-- Listing of all files that should be installed for the module to function -->
   <files>
     <!-- The "module" attribute signifies that this is the main controller file -->
-    <filename>icons/educacion.svg</filename>
-    <filename>icons/box.svg</filename>
-    <filename>icons/estadisticas.svg</filename>
-    <filename>icons/buscador.svg</filename>
-    <filename>icons/mas.svg</filename>
-    <filename>icons/normativa.svg</filename>
-    <filename>icons/odujaInfo.svg</filename>
-    <filename>icons/newsletterinfo.svg</filename>
-    <filename>icons/newsletterNormas.svg</filename>
-    <filename>icons/sobreOduja.svg</filename>
-    <filename>icons/trabajosocial.svg</filename>
-    <filename>icons/newsletter01.svg</filename>
-    <filename>icons/estudios.svg</filename>
-    <filename>icons/contacto.svg</filename>
-    <filename>icons/enfermeria.svg</filename>
-    <filename>icons/bibliography.svg</filename>
-    <filename>icons/accesibilidad.svg</filename>
-    <filename>icons/world.svg</filename>
-    <filename>icons/inicio.svg</filename>
-    <filename>icons/socio.svg</filename>
-    <filename>icons/psicologia.svg</filename>
-    <filename>icons/info.svg</filename>
-    <filename>icons/redParticipacion.svg</filename>
-    <filename>icons/otrosDocumentos.svg</filename>
-    <filename>icons/formacion.svg</filename>
-    <filename>icons/newsletter.svg</filename>
-    <filename>icons/index.html</filename>
     <filename>js/funciones.js</filename>
     <filename>js/jquery-1.4.2.min.js</filename>
     <filename>js/index.html</filename>

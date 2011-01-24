@@ -50,7 +50,7 @@ echo '<g id="text">
          . $_GET["t"].'</text></g>';
 
 // Icon
-$iconFile = '../icons/'. $_GET["i"];
+$iconFile = '../../../images/stories/'. $_GET["i"];
 if( file_exists($iconFile) )
 	include($iconFile);
 
