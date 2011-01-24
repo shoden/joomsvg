@@ -22,7 +22,7 @@
   <authorUrl></authorUrl> 
 
   <!-- Module version number -->
-  <version>0.1.1</version> 
+  <version>0.1.2</version> 
 
   <!-- Description of what the module does -->
   <description>MODULE DESC</description>
@@ -40,6 +40,7 @@
     <filename>tmpl/datos.php</filename>
     <filename>tmpl/svg.menubutton.php</filename>
     <filename>tmpl/svg.morebutton.php</filename>
+    <filename>tmpl/svg.upbutton.php</filename>
     <filename>tmpl/ajax.js</filename>
     <filename>tmpl/funciones.php</filename>
     <filename>tmpl/index.html</filename>
