@@ -66,6 +66,15 @@ function ajax(id, layer){
      }
 }
 
+function upLevel(layer)
+{
+	prev = layer - 1;
+	parent.document.getElementById("capa"+prev).style.visibility = "visible";
+	
+    for(i=layer;i<4;i++)
+		parent.document.getElementById("capa"+i).style.visibility = "hidden";
+}
+
 //Función para crear un objeto de tipo AJAX
 function nuevoAjax()
 { 

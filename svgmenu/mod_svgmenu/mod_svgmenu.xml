@@ -73,5 +73,6 @@
     <param name="iconsize" type="text" default="16" label="ICON SIZE" description="ICON SIZE DESC" />
     <param name="iconmargin" type="text" default="10" label="ICON MARGIN" description="ICON MARGIN DESC" />
     <param name="iconfontsize" type="text" default="12" label="ICON FONT SIZE" description="ICON FONT SIZE DESC" />
+    <param name="baseurl" type="text" default="" label="BASE URL" description="BASE URL DESC" />
   </params>
 </install>

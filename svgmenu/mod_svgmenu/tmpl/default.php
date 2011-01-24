@@ -8,7 +8,7 @@
 
     include_once('funciones.php');
 
-	// Up button
+	// Up button space
 	echo space($iconsize); 
 	echo space($iconmargin);
 

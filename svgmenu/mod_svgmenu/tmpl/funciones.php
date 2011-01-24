@@ -43,6 +43,15 @@ function button($id, $data, $size)
 	  ';
  }
  
+function upbutton($layer, $id, $data, $size)
+{
+	return '<object id="up-'. $layer .'" type="image/svg+xml" data="'. 
+	  $data .'" height="'. $size .'%" width="'. $size .'%">
+		<param name="wmode" value="transparent">
+	  </object>
+	  ';
+ }
+ 
 /**
  * Generate a SVG blank space
  * @param int $size space size

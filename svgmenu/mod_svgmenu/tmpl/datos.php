@@ -12,6 +12,7 @@ $iconmargin = 2;
 $iconwidth= 120;
 $iconheight=120;
 $iconfontsize=13;
+$blink="http://oduja.cpmti.es";
 
 $sql = "SELECT params FROM jos_modules WHERE module='mod_svgmenu';";
 $result = mysql_query($sql, $conexion) or die(mysql_error());
@@ -22,9 +23,9 @@ if(mysql_num_rows($result)){
 	$iconheight = getParam("iconheight", $row[0]);
 	$iconmargin = getParam("iconmargin", $row[0]);
 	$iconfontsize = getParam("iconfontsize", $row[0]);
+	$blink = getParam("baseurl", $row[0]);
 }
 
-$blink="http://192.168.1.101/~juan/oduja/web/";
 $link="";
 $icontype=0;
 $id=30;
@@ -37,7 +38,10 @@ $num = mysql_num_rows($res);
 $i=0;
 if($num>0){
 	// Up button
-	echo space($iconsize); 
+	$svg = "modules/mod_svgmenu/tmpl/svg.upbutton.php?w=" . $iconwidth
+	     . "&h=" . $iconheight . "&t=" . "Arriba" . "&ts=" . $iconfontsize . "&l=" . $layer;
+	echo upbutton( $layer, "up", $svg, $iconsize);	
+	//echo upbutton($layer); 
 	echo space($iconmargin);
 	
 	// Menu buttons
