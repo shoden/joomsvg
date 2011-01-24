@@ -30,24 +30,59 @@
   <!-- Listing of all files that should be installed for the module to function -->
   <files>
     <!-- The "module" attribute signifies that this is the main controller file -->
-    <filename module="mod_svgmenu">mod_svgmenu.php</filename>
-    <filename>helper.php</filename>
-    <filename>index.html</filename>
+    <filename>icons/educacion.svg</filename>
     <filename>icons/box.svg</filename>
+    <filename>icons/estadisticas.svg</filename>
+    <filename>icons/buscador.svg</filename>
+    <filename>icons/mas.svg</filename>
+    <filename>icons/normativa.svg</filename>
+    <filename>icons/odujaInfo.svg</filename>
+    <filename>icons/newsletterinfo.svg</filename>
+    <filename>icons/newsletterNormas.svg</filename>
+    <filename>icons/sobreOduja.svg</filename>
+    <filename>icons/trabajosocial.svg</filename>
+    <filename>icons/newsletter01.svg</filename>
+    <filename>icons/estudios.svg</filename>
+    <filename>icons/contacto.svg</filename>
+    <filename>icons/enfermeria.svg</filename>
+    <filename>icons/bibliography.svg</filename>
+    <filename>icons/accesibilidad.svg</filename>
     <filename>icons/world.svg</filename>
-    <filename>images/blank.svg</filename>
-    <filename>images/button_blue.svg</filename>
-    <filename>images/button_green.svg</filename>
-    <filename>images/button_red.svg</filename>
-    <filename>images/button_yellow.svg</filename>
-    <filename>images/index.html</filename>
+    <filename>icons/inicio.svg</filename>
+    <filename>icons/socio.svg</filename>
+    <filename>icons/psicologia.svg</filename>
+    <filename>icons/info.svg</filename>
+    <filename>icons/redParticipacion.svg</filename>
+    <filename>icons/otrosDocumentos.svg</filename>
+    <filename>icons/formacion.svg</filename>
+    <filename>icons/newsletter.svg</filename>
+    <filename>icons/index.html</filename>
     <filename>js/funciones.js</filename>
-    <filename>js/index.html</filename>
     <filename>js/jquery-1.4.2.min.js</filename>
+    <filename>js/index.html</filename>
+    <filename>language/index.html</filename>
+    <filename module="mod_svgmenu">mod_svgmenu.php</filename>
     <filename>tmpl/default.php</filename>
-    <filename>tmpl/index.html</filename>
+    <filename>tmpl/conectar.php</filename>
+    <filename>tmpl/datos.php</filename>
     <filename>tmpl/svg.menubutton.php</filename>
     <filename>tmpl/svg.morebutton.php</filename>
+    <filename>tmpl/ajax.js</filename>
+    <filename>tmpl/funciones.php</filename>
+    <filename>tmpl/index.html</filename>
+    <filename>images/button_blue.svg</filename>
+    <filename>images/button_green.svg</filename>
+    <filename>images/logo.svg</filename>
+    <filename>images/param.js</filename>
+    <filename>images/button_black.svg</filename>
+    <filename>images/button_red.svg</filename>
+    <filename>images/blank.svg</filename>
+    <filename>images/button_white1.svg</filename>
+    <filename>images/button_white2.svg</filename>
+    <filename>images/button_yellow.svg</filename>
+    <filename>images/index.html</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
   </files>
 
   <!-- Language files -->
