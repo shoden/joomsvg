@@ -5,7 +5,7 @@
 <author>CPMTI</author>
 <authorEmail></authorEmail>	  
 <authorUrl>CPMTI.es</authorUrl>
-<version>0.1</version>
+<version>0.1.2</version>
 <description>Scalable template with 16:9 aspect ratio</description>
 	<files>
 		<filename>favicon.ico</filename>

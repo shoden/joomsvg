@@ -1,9 +1,9 @@
 #!/bin/bash
 
-TMPL="scalable1"
+[ $# -gt 0 ] || exit 1
+[ -d $1    ] || exit 1
 
-[ -d $TMPL ] || exit 1
-
+TMPL=$1
 VER=$(cat $TMPL/templateDetails.xml \
     | grep -re "<version>" \
     | sed 's/<version>\(.*\)<\/version>/\1/g' \

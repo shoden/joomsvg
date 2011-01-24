@@ -31,12 +31,12 @@
             <div class="volver2">
                 <jdoc:include type="modules" name="volver2" />
             </div>
-            <div class="mainheader">
+            <div class="mainheader" id="mainheader">
             	<div class="spacer">
             	</div>
               	<jdoc:include type="modules" name="titulo" />
             </div>
-            <div class="main">   
+            <div class="main" id="main">   
             
             	<div class="maininside">   
                 	<div class="maininside2">           
