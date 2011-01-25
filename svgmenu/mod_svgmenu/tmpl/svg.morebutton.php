@@ -10,7 +10,10 @@ $total = intval( (isset($_GET['total']))?$_GET['total']:0 );
 $current = intval( (isset($_GET['current']))?$_GET['current']:1 );
 $pages = $total;
 $page  = $current;
-$action = "moreLevel($id, $layer, $pages, $page)";
+$enabled = ($pages==1) ? false : true;
+$action = ($enabled) ? "moreLevel($id, $layer, $pages, $page)" : "";
+$opacity = ($enabled) ? 1.0 : 0.2;
+$role = ($enabled) ? 'role="button" cursor="pointer"' : '';
 
 // SVG header
 echo '<svg xmlns="http://www.w3.org/2000/svg" 
@@ -20,9 +23,9 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     id="blue_button"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'"
-    onload="showLevel('.$layer.')">
-<a onclick="'. $action .'">
-<g role="button" cursor="pointer" style="opacity: 1.0">';
+    onload="showLevel('.$layer.')">';
+if($enabled) echo '<a onclick="'. $action .'">';
+echo '<g '. $role .' style="opacity: '. $opacity .'">';
 
 echo '<script type="application/ecmascript"> <![CDATA[';
 include("ajax.js");
@@ -37,7 +40,7 @@ if( file_exists($buttonFile) )
 	include($buttonFile);
 
 // Text
-$pagination = " ($page,$pages)";
+$pagination = ($enabled) ? " ($page,$pages)" : "";
 echo '<g id="text">
 			<text font-family="Verdana" font-size="'. $_GET["ts"].'" 
 			fill="black" content-value="'. $_GET["t"] . $pagination.'"
@@ -63,5 +66,7 @@ echo '<use id="icon1" xlink:href="#icon" x="'.($width-64)/2 .'" y="13"/>';
 echo '<use id="txt1" xlink:href="#text" x="'.$width/2 .'" y="100" />';
 
 // SVG end
-echo '</g></a></svg>';
+echo '</g>';
+if($enabled) echo '</a>';
+echo '</svg>';
 ?>
