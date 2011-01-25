@@ -19,7 +19,7 @@ INSTALACIÓN DEL MENÚ SVG
     quedaría así:
       $filter = '\.svg$|\.png$|\.gif$|\.jpg$|\.bmp$|\.ico$';
 
-- Copiar los iconos del menú (ficheros SVG) en la carpeta de Joomla 'images/stories'.
+- Copiar los iconos del menú de la carpeta 'svgmenu/icons' a la carpeta de Joomla 'images/stories'.
 
 
 CREACIÓN DE MENÚ SVG
