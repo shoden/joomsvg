@@ -4,11 +4,12 @@ INSTALACIÓN DE LA PLANTILLA
   . Instalar la plantilla 'scalable0'.
   . Definir la plantilla 'scalable0' como predeterminada.
 
-INSTALACIÓN DEL MENÚ
+
+INSTALACIÓN DEL MENÚ SVG
 
 - Entrar en el backend de Joomla y hacer:
   . Crear un menú con nombre único 'svgmenu' y título 'Menú SVG'.
-  . Instalar el módulo 'mod_svmenu'. Colocarlo en la posición 'menu' y asociarle el menú 'svgmenu'.
+  . Instalar el módulo 'mod_svgmenu'. Colocarlo en la posición 'menu' y asociarle el menú 'svgmenu'.
 
 - Editar el fichero modules/mod_svgmenu/tmpl/conectar.php con los datos de conexión MySQL.
 
@@ -20,7 +21,8 @@ INSTALACIÓN DEL MENÚ
 
 - Copiar los iconos del menú (ficheros SVG) en la carpeta de Joomla 'images/stories'.
 
-CREACIÓN DE MENÚ
+
+CREACIÓN DE MENÚ SVG
 
 - Entrar en el backend de Joomla y hacer:
   . Ir a 'Menús' > 'Menú SVG'.
@@ -35,10 +37,33 @@ CREACIÓN DE MENÚ
   . Menú de imágenes. Imagen SVG que será su icono en el menú.
   . Estado. Habilitado o inhabilitado. 
 
-CONFIGURACIÓN DEL MENÚ
+
+CONFIGURACIÓN DEL MENÚ SVG
 
 - Entrar en el backend de Joomla y hacer:
   . Ir a 'Extensiones' > 'Gestor de módulos'.
   . Seleccionar 'Menú SVG'.
   . Modificar los parámetros.
   . Pulsar el botón 'Guardar'.
+
+
+INSTALACIÓN DEL ENLACE SVG
+
+- Entrar en el backend de Joomla y hacer:
+  . Instalar el módulo 'mod_svglink'.
+  . Habilitarlo y colocarlo en la posición deseada.
+
+
+CONFIGURACIÓN DEL ENLACE SVG
+
+- Entrar en el backend de Joomla y hacer:
+  . Ir a 'Extensiones' > 'Gestor de módulos'.
+  . Seleccionar 'Enlace SVG'.
+  . Editar sus parámetros:
+    . Anchura: Anchura del SVG (en porcentaje, el símbolo % no se pone)
+    . Altura: Altura del SVG (en porcentaje, el símbolo % no se pone)
+    . Tamaño: Tamaño del SVG en proporción al sitio web (en porcentaje, el símbolo % no se pone)
+    . Hipervínculo: Dirección del enlace
+    . Imagen: Imagen SVG. Debe estar en la carpeta de Joomla 'images/stories'.
+    . ID de la capa: ID de la capa HTML donde se generará el enlace SVG.
+    . Posición: Posición de la plantilla donde se generará el enlace SVG.
