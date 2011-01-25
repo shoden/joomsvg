@@ -27,6 +27,6 @@ function Resize() {
   var x = ((w/h) < (16/9)) ? w : h;
   
  //document.getElementById('debug').innerHTML = w + 'x' + h + '=' + x;
-  
+
   SVGscale(x/480);
 }
