@@ -36,19 +36,19 @@ function lista($id)
  */
 function button($id, $data, $size)
 {
-	return '<object id="button-'. $id .'" type="image/svg+xml" data="'. 
+	return '<embed wmode="transparent" allowtransparency="true"  id="button-'. $id .'" type="image/svg+xml" src="'. 
 	  $data .'" height="'. $size .'%" width="'. $size .'%">
 		<param name="wmode" value="transparent">
-	  </object>
+	  </embed>
 	  ';
  }
  
 function upbutton($layer, $id, $data, $size)
 {
-	return '<object id="up-'. $layer .'" type="image/svg+xml" data="'. 
+	return '<embed wmode="transparent" allowtransparency="true"  id="up-'. $layer .'" type="image/svg+xml" src="'. 
 	  $data .'" height="'. $size .'%" width="'. $size .'%">
 		<param name="wmode" value="transparent">
-	  </object>
+	  </embed>
 	  ';
  }
  
@@ -59,11 +59,10 @@ function upbutton($layer, $id, $data, $size)
  */ 
  function space($size)
 {
-	return '<object type="image/svg+xml" data="modules/mod_svgmenu/images/blank.svg"
+	return '<embed wmode="transparent" allowtransparency="true"  type="image/svg+xml" src="modules/mod_svgmenu/images/blank.svg"
 	    height="1%" width="'. $size .'%">
-		<param name="src" value="blank.svg">
 		<param name="wmode" value="transparent">
-	  </object>
+	  </embed>
 	  ';
  }
  
