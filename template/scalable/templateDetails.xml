@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<install version="1.5" type="template">
+<name>Scalable</name>
+<creationDate>October 2010</creationDate>
+<author>CPMTI</author>
+<authorEmail></authorEmail>	  
+<authorUrl>CPMTI.es</authorUrl>
+<version>0.2</version>
+<description>Scalable template with 16:9 aspect ratio</description>
+	<files>
+		<filename>favicon.ico</filename>
+	    <filename>index.html</filename>
+	    <filename>index.php</filename>
+	    <filename>params.ini</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>css/estilos.css</filename>
+		<filename>css/index.html</filename>
+		<filename>css/border-radius.htc</filename>
+		<filename>images/fondoA.jpg</filename>
+		<filename>images/fondoB.jpg</filename>
+		<filename>images/fondoC.jpg</filename>
+		<filename>images/transp1.png</filename>
+		<filename>images/transp2.png</filename>
+		<filename>images/index.html</filename>
+		<filename>js/funciones.js</filename>
+		<filename>js/index.html</filename>
+		<filename>js/jquery-1.4.2.min.js</filename>
+	</files>
+	<positions>
+		<position>logo</position>
+		<position>menu</position>
+		<position>titulo</position>
+		<position>volver1</position>
+		<position>volver2</position>
+		<position>extramain</position>
+	</positions>
+	<params>
+		<param type="spacer" default="Configurations" />
+		<param name="slogan" type="text" default="" label="Slogan" description="Slogan" />
+		<param name="twitter" type="text" default="" label="Twitter URL" description="Twitter URL" />
+		<param name="feed" type="text" default="" label="Feed URL" description="Feed URL" />
+	</params>
+</install>
