@@ -5,7 +5,7 @@
 
 cd $1
 
-for i in $(find ./ -type f | grep -ve "\.xml$" | sed 's/^\.\///g')
+for i in $(find ./ -type f | sed 's/^\.\///g')
 do
   echo "    <filename>"$i"</filename>"
 done
