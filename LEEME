@@ -1,8 +1,8 @@
 INSTALACIÓN DE LA PLANTILLA
 
 - Entrar en el backend de Joomla y hacer:
-  . Instalar la plantilla 'scalable0'.
-  . Definir la plantilla 'scalable0' como predeterminada.
+  . Instalar la plantilla 'scalable'.
+  . Definir la plantilla 'scalable' como predeterminada.
 
 
 INSTALACIÓN DEL MENÚ SVG
@@ -64,6 +64,26 @@ CONFIGURACIÓN DEL ENLACE SVG
     . Altura: Altura del SVG (en porcentaje, el símbolo % no se pone)
     . Tamaño: Tamaño del SVG en proporción al sitio web (en porcentaje, el símbolo % no se pone)
     . Hipervínculo: Dirección del enlace
+    . Imagen: Imagen SVG. Debe estar en la carpeta de Joomla 'images/stories'.
+    . ID de la capa: ID de la capa HTML donde se generará el enlace SVG.
+    . Posición: Posición de la plantilla donde se generará el enlace SVG.
+
+INSTALACIÓN DEL ENLACE SVG HACIA ATRÁS
+
+- Entrar en el backend de Joomla y hacer:
+  . Instalar el módulo 'mod_svgbacklink'.
+  . Habilitarlo y colocarlo en la posición deseada.
+
+
+CONFIGURACIÓN DEL ENLACE SVG HACIA ATRÁS
+
+- Entrar en el backend de Joomla y hacer:
+  . Ir a 'Extensiones' > 'Gestor de módulos'.
+  . Seleccionar 'Enlace SVG hacia atrás'.
+  . Editar sus parámetros:
+    . Anchura: Anchura del SVG (en porcentaje, el símbolo % no se pone)
+    . Altura: Altura del SVG (en porcentaje, el símbolo % no se pone)
+    . Tamaño: Tamaño del SVG en proporción al sitio web (en porcentaje, el símbolo % no se pone)
     . Imagen: Imagen SVG. Debe estar en la carpeta de Joomla 'images/stories'.
     . ID de la capa: ID de la capa HTML donde se generará el enlace SVG.
     . Posición: Posición de la plantilla donde se generará el enlace SVG.
