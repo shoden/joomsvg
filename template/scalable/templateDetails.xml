@@ -5,7 +5,7 @@
 <author>CPMTI</author>
 <authorEmail></authorEmail>	  
 <authorUrl>CPMTI.es</authorUrl>
-<version>0.2</version>
+<version>0.2.1</version>
 <description>Scalable template with 16:9 aspect ratio</description>
 	<files>
     <filename>index.php</filename>

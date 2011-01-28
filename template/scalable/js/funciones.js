@@ -35,6 +35,7 @@ function resolucion()
 // BrowserDetect.browser = Browser name
 // BrowserDetect.version = Browser version
 // BrowserDetect.OS      = Operating system
+
 var BrowserDetect = {
 	init: function () {
 		this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
@@ -152,10 +153,78 @@ var BrowserDetect = {
 };
 
 function inicio(){
-  BrowserDetect.init();
-
-  if(BrowserDetect.browser == "Safari")
-    document.getElementById("mainstyle").href = "templates/scalable/css/safari.css";
-  
   resolucion();
+  
+  // check Safari mode
+  BrowserDetect.init();
+  if(BrowserDetect.browser == "Safari"){
+    document.getElementById("mainstyle").href = "templates/scalable/css/safari.css";
+
+    paintBG( document.getElementById('button-up') );  
+    paintBG( document.getElementById('button-0') );
+    paintBG( document.getElementById('button-1') );
+    paintBG( document.getElementById('button-2') );
+    paintBG( document.getElementById('button-3') );
+    paintBG( document.getElementById('button-more') );
+  
+    paintBG( document.getElementById('space-up') );  
+    
+    paintBG( document.getElementById('space-0') );
+    paintBG( document.getElementById('space-1') );
+    paintBG( document.getElementById('space-2') );
+    paintBG( document.getElementById('space-3') );  
+   };
 }
+
+function paintBG(svgElement)
+{
+  var embed = svgElement;
+  try {
+    svgdoc = embed.getSVGDocument();
+  }
+  catch(exception) {
+    alert('The GetSVGDocument interface is not supported');
+  }
+  
+    if (svgdoc && svgdoc.defaultView)  // try the W3C standard way first
+    svgwin = svgdoc.defaultView;
+  else if (embed.window)
+    svgwin = embed.window;
+  else try {
+    svgwin = embed.getWindow();
+  }
+  catch(exception) {
+    alert('The DocumentView interface is not supported\r\n' +
+          'Non-W3C methods of obtaining "window" also failed');
+  }
+  svgwin.changeBg();
+}
+
+function bg()
+{
+  var embed = document.getElementById('button-0');
+  
+  try {
+    svgdoc = embed.getSVGDocument();
+  }
+  catch(exception) {
+    alert('The GetSVGDocument interface is not supported');
+  }
+  
+  if (svgdoc && svgdoc.defaultView)  // try the W3C standard way first
+    svgwin = svgdoc.defaultView;
+  else if (embed.window)
+    svgwin = embed.window;
+  else
+    try {
+      svgwin = embed.getWindow();
+    }
+    catch(exception) {
+      alert('The DocumentView interface is not supported\r\n' +
+            'Non-W3C methods of obtaining "window" also failed');
+    }
+
+  
+}
+
+
