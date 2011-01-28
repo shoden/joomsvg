@@ -5,6 +5,8 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?> ';
 $width  = intval( (isset($_GET['w']))?$_GET['w']:120 );
 $height = intval( (isset($_GET['h']))?$_GET['h']:150 );
 $action = "upLevel(" . intval( (isset($_GET['l']))?$_GET['l']:1 ) . ")";
+$bg = (isset($_GET['bg'])) ? "#".$_GET['bg'] : "transparent";
+$paintbg = (isset($_GET['paintbg'])) ? $bg : "transparent";
 //$action = "upLevel(1)";
 
 //$width = 120; $height = 150;
@@ -14,7 +16,7 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     xmlns:svg="http://www.w3.org/2000/svg"
     xml:space="preserve"
-    id="blue_button"
+    id="button-up"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'">
 <a onclick="'. $action . '">
@@ -22,6 +24,9 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
 
 echo '<script type="application/ecmascript"> <![CDATA[';
 include("ajax.js");
+echo'function changeBg(){
+    document.getElementById("bg").setAttributeNS(null,"fill","'.$bg.'");
+  }';
 echo' ]]> </script>';
 
 // Elements definition
@@ -40,8 +45,7 @@ echo '<g id="text">
          style="dominant-baseline: central; text-anchor:middle;">'
          . $_GET["t"].'</text></g>';
 
-// Icon 
- 
+// Icon
 $iconFile = '../../../images/stories/'. $_GET["i"];
 if( file_exists($iconFile) )
 	include($iconFile);
@@ -49,9 +53,9 @@ if( file_exists($iconFile) )
 // End of elements definition
 echo '</defs>';
 
-if($_GET['debug']==1)
-	echo'<g id="Layer_1"><rect fill-rule="evenodd" clip-rule="evenodd" 
-	     fill="#FF0000" width="100%" height="100%"/></g>';
+// Optional background color
+echo'<g id="Layer_1"><rect id="bg" name="bg" fill-rule="evenodd" clip-rule="evenodd" 
+	     fill="'.$paintbg.'" width="100%" height="100%"/></g>';
 	     
 // Render elements
 echo '<use id="button1" xlink:href="#button" x="'.($width-90)/2 .'" y="0"/>';

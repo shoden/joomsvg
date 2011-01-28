@@ -36,7 +36,7 @@ function lista($id)
  */
 function button($id, $data, $size)
 {
-	return '<embed wmode="transparent" allowtransparency="true"  id="button-'. $id .'" type="image/svg+xml" src="'. 
+	return '<embed id="button-'. $id .'" type="image/svg+xml" src="'. 
 	  $data .'" height="'. $size .'%" width="'. $size .'%">
 		<param name="wmode" value="transparent">
 	  </embed>
@@ -45,7 +45,7 @@ function button($id, $data, $size)
  
 function upbutton($layer, $id, $data, $size)
 {
-	return '<embed wmode="transparent" allowtransparency="true"  id="up-'. $layer .'" type="image/svg+xml" src="'. 
+	return '<embed id="up-'. $layer .'" type="image/svg+xml" src="'. 
 	  $data .'" height="'. $size .'%" width="'. $size .'%">
 		<param name="wmode" value="transparent">
 	  </embed>
@@ -57,9 +57,9 @@ function upbutton($layer, $id, $data, $size)
  * @param int $size space size
  * @return string SVG space code
  */ 
- function space($size)
+ function space($size, $id, $data)
 {
-	return '<embed wmode="transparent" allowtransparency="true"  type="image/svg+xml" src="modules/mod_svgmenu/images/blank.svg"
+	return '<embed type="image/svg+xml" src="'.$data.'" id="'.$id.'"
 	    height="1%" width="'. $size .'%">
 		<param name="wmode" value="transparent">
 	  </embed>

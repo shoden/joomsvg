@@ -9,8 +9,9 @@
     include_once('funciones.php');
 
 	// Up button space
-	echo space($iconsize); 
-	echo space($iconmargin);
+  $spacesvg = "modules/mod_svgmenu/tmpl/svg.spacebutton.php?bg=" . $bg;
+	echo space($iconsize, "button-up", $spacesvg); 
+	echo space($iconmargin, "space-up", $spacesvg);
 
 	// Menu buttons
 	for($i=0; $i<count($items) && $i<4; $i++) {
@@ -20,22 +21,22 @@
 		    $items[$i]->name . "&i=" . $items[$i]->img . "&ts=" . 
 		    $iconfontsize . "&blink=" . urlencode(JURI::base()) ."&link=" . 
 		    urlencode($items[$i]->link) . "&y=" . $icontype . "&id=" . $items[$i]->id .
-		    "&is=" . $iconsize . "&l=1";
+		    "&is=" . $iconsize . "&l=1&bg=" . $bg;
 	
 		echo button($i, $svg, $iconsize);
-		echo space($iconmargin);
+		echo space($iconmargin, "space-".$i, $spacesvg);
 	}
 
 	// Filling spaces
 	for($i=$i; $i<4; $i++){
-		echo space($iconsize); 
-		echo space($iconmargin); 
+		echo space($iconsize, "button-".$i, $spacesvg); 
+		echo space($iconmargin, "space-".$i, $spacesvg); 
 	}
 	
 	// More button
 	$svg = "modules/mod_svgmenu/tmpl/svg.morebutton.php?w=" . $iconwidth
 	     . "&h=" . $iconheight . "&t=" . "Más" . "&ts=" . $iconfontsize
-	     . "&l=0" . "&total=". ceil(count($items)/4) . "&current=1";
+	     . "&l=0" . "&total=". ceil(count($items)/4) . "&current=1&bg=" . $bg;
 	echo button( "more", $svg, $iconsize );
 ?>
 </div>

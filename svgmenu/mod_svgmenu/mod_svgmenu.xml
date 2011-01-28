@@ -22,7 +22,7 @@
   <authorUrl></authorUrl> 
 
   <!-- Module version number -->
-  <version>0.1.1</version> 
+  <version>0.2.1</version> 
 
   <!-- Description of what the module does -->
   <description>MODULE DESC</description>
@@ -40,6 +40,8 @@
     <filename>tmpl/datos.php</filename>
     <filename>tmpl/svg.menubutton.php</filename>
     <filename>tmpl/svg.morebutton.php</filename>
+    <filename>tmpl/svg.spacebutton.php</filename>
+    <filename>tmpl/svg.upbutton.php</filename>
     <filename>tmpl/ajax.js</filename>
     <filename>tmpl/funciones.php</filename>
     <filename>tmpl/index.html</filename>
@@ -49,7 +51,6 @@
     <filename>images/param.js</filename>
     <filename>images/button_black.svg</filename>
     <filename>images/button_red.svg</filename>
-    <filename>images/blank.svg</filename>
     <filename>images/button_white1.svg</filename>
     <filename>images/button_white2.svg</filename>
     <filename>images/button_yellow.svg</filename>
@@ -74,5 +75,6 @@
     <param name="iconmargin" type="text" default="10" label="ICON MARGIN" description="ICON MARGIN DESC" />
     <param name="iconfontsize" type="text" default="12" label="ICON FONT SIZE" description="ICON FONT SIZE DESC" />
     <param name="baseurl" type="text" default="" label="BASE URL" description="BASE URL DESC" />
+    <param name="bg" type="text" default="FFFFFF" label="BG" description="BG DESC" />
   </params>
 </install>

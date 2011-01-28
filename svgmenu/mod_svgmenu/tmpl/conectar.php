@@ -1,7 +1,7 @@
 <?php
 // Conecto con MySQL
 
-$conexion = mysql_connect("localhost", "usuario", "pass");
+$conexion = mysql_connect("localhost", "root", "jrr360");
 mysql_select_db("odu", $conexion);
 
 ?>

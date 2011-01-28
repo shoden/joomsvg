@@ -12,6 +12,7 @@ $iconwidth = $params->get('iconwidth');
 $iconheight = $params->get('iconheight');
 $iconmargin = $params->get('iconmargin');
 $iconfontsize = $params->get('iconfontsize');
+$bg = $params->get('bg');
  
 // get the items to display from the helper
 $items = ModSvgMenuHelper::getItems($menutype); 
