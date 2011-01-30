@@ -9,8 +9,8 @@
     <script type="text/javascript" src="templates/scalable/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="templates/scalable/js/funciones.js"></script>		
   </head>
-  <body onResize="resolucion();" onload="inicio();">
-    <div id="container" class="container" >
+  <body onResize="resolucion()" onload="inicio()">
+    <div id="container" class="container">
       <div id="fondoA" class="fondoA" >
         <div id="fondoB" class="fondoB" >
           <div id="capa_fondo" class="capa_fondo" >
@@ -43,10 +43,8 @@
              		 		<jdoc:include type="message" />
              	 			<jdoc:include type="component" />  
                  	</div> 	
-                    
                 </div> 	       
               	<jdoc:include type="modules" name="extramain" />
-     
             </div>
           </div>
         </div>

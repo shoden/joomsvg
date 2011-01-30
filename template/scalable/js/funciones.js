@@ -149,16 +149,17 @@ var BrowserDetect = {
 			identity: "Linux"
 		}
 	]
-
 };
 
-function inicio(){
+function inicio()
+{
   resolucion();
-  
-  // check Safari mode
+
+  // Check Safari mode
   BrowserDetect.init();
   if(BrowserDetect.browser == "Safari"){
     document.getElementById("mainstyle").href = "templates/scalable/css/safari.css";
+    document.getElementById("container").style.display = "inline";
 
     paintBG( document.getElementById('button-up') );  
     paintBG( document.getElementById('button-0') );
@@ -166,14 +167,14 @@ function inicio(){
     paintBG( document.getElementById('button-2') );
     paintBG( document.getElementById('button-3') );
     paintBG( document.getElementById('button-more') );
-  
     paintBG( document.getElementById('space-up') );  
-    
     paintBG( document.getElementById('space-0') );
     paintBG( document.getElementById('space-1') );
     paintBG( document.getElementById('space-2') );
     paintBG( document.getElementById('space-3') );  
-   };
+   }
+   else
+    document.getElementById("container").style.display = "inline";
 }
 
 function paintBG(svgElement)
@@ -223,8 +224,4 @@ function bg()
       alert('The DocumentView interface is not supported\r\n' +
             'Non-W3C methods of obtaining "window" also failed');
     }
-
-  
 }
-
-
