@@ -2,29 +2,24 @@ function resolucion()
 {
   var ancho = $(window).width();
   var alto = $(window).height();
-  var texto = '20px';
 
   if((ancho/alto)>(16/9)){  // Es más ancho que alto  	
-    texto = ancho-1024;
-    document.body.style.fontSize = ((texto)+("%"));
     alto_capa = alto - (alto*0.16);
     top_capa = (0);
     ancho_capa = (alto_capa*(16/9)) - ((alto_capa*(16/9)) * 0.08);
     centrar_capa = (ancho - ancho_capa)/2;
-    
+    document.getElementById('body').style.fontSize = ((parseInt(ancho_capa/3))+("%"));
     document.getElementById('capa_fondo').style.height = alto_capa+"px";
     document.getElementById('capa_fondo').style.width = ancho_capa+"px";
     document.getElementById('capa_fondo').style.marginLeft = centrar_capa+"px"; 
     document.getElementById('capa_fondo').style.marginTop = top_capa+"0"; 
   }
   else { // Es más alto que ancho
-    texto = ancho-1024;
-    document.body.style.fontSize = ((texto)+("%"));
     ancho_capa = ancho - (ancho*0.16);
     left_capa = (ancho*0.08);
     alto_capa = (ancho_capa/(16/9)) - ((ancho_capa/(16/9)) * 0); 
     centrar_capa = (alto - alto_capa) * 0;
-
+    document.getElementById('body').style.fontSize = ((parseInt(ancho_capa/3))+("%"));
     document.getElementById('capa_fondo').style.height = alto_capa+"px";
     document.getElementById('capa_fondo').style.width = ancho_capa+"px";
     document.getElementById('capa_fondo').style.marginLeft = left_capa+"px"; 
@@ -172,6 +167,7 @@ function inicio()
     paintBG( document.getElementById('space-1') );
     paintBG( document.getElementById('space-2') );
     paintBG( document.getElementById('space-3') );  
+    
    }
    else
     document.getElementById("container").style.display = "inline";
@@ -184,7 +180,7 @@ function paintBG(svgElement)
     svgdoc = embed.getSVGDocument();
   }
   catch(exception) {
-    alert('The GetSVGDocument interface is not supported');
+    //alert('The GetSVGDocument interface is not supported');
   }
   
     if (svgdoc && svgdoc.defaultView)  // try the W3C standard way first
@@ -201,27 +197,3 @@ function paintBG(svgElement)
   svgwin.changeBg();
 }
 
-function bg()
-{
-  var embed = document.getElementById('button-0');
-  
-  try {
-    svgdoc = embed.getSVGDocument();
-  }
-  catch(exception) {
-    alert('The GetSVGDocument interface is not supported');
-  }
-  
-  if (svgdoc && svgdoc.defaultView)  // try the W3C standard way first
-    svgwin = svgdoc.defaultView;
-  else if (embed.window)
-    svgwin = embed.window;
-  else
-    try {
-      svgwin = embed.getWindow();
-    }
-    catch(exception) {
-      alert('The DocumentView interface is not supported\r\n' +
-            'Non-W3C methods of obtaining "window" also failed');
-    }
-}

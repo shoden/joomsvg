@@ -9,7 +9,7 @@
     <script type="text/javascript" src="templates/scalable/js/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="templates/scalable/js/funciones.js"></script>		
   </head>
-  <body onResize="resolucion()" onload="inicio()">
+  <body onResize="resolucion()" onload="inicio()" id="body">
     <div id="container" class="container">
       <div id="fondoA" class="fondoA" >
         <div id="fondoB" class="fondoB" >
