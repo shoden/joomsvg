@@ -12,8 +12,6 @@
     <script type="text/javascript" src="templates/scalable/js/funciones.js"></script>		
   </head>
   <body onResize="resolucion()" onload="inicio()" id="body">
-  <a onclick="magia()" href="#">aa</a>
-  <div id="pego">pegolete</div>
     <div id="container" class="container">
       <div id="fondoA" class="fondoA" >
         <div id="fondoB" class="fondoB" >
