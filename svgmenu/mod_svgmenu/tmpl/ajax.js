@@ -178,6 +178,7 @@ function moreLevel(id, layer, pages, page)
   for(i=layer+1;i<4;i++)
 		parent.document.getElementById("capa"+i).style.visibility = "hidden";
 	
+  parent.currentLevel = layer;
   showpage = (page<pages) ? page+1 : 1;
 	ajax(id, layer, pages, showpage);
 }
