@@ -1,9 +1,3 @@
-function hola(id) {
-  
-  var cadena = "Hola mundo! " + id;
-  alert (cadena);
-}
-
 //var W3CDOM = (document.createElement && document.getElementsByTagName);
 //window.onload   = init;
 function init(evt) {
@@ -25,8 +19,6 @@ function Resize() {
   var h = $(window).height();
 
   var x = ((w/h) < (16/9)) ? w : h;
-  
  //document.getElementById('debug').innerHTML = w + 'x' + h + '=' + x;
-
-  SVGscale(x/480);
+ // SVGscale(x/480);
 }

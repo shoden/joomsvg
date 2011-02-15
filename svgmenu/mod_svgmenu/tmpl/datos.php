@@ -17,7 +17,7 @@ $iconmargin = 2;
 $iconwidth= 120;
 $iconheight=120;
 $iconfontsize=13;
-$blink="http://oduja.cpmti.es";
+$blink="http://192.168.1.102/~juan/j/odu";
 $bg = "";
 
 $sql = "SELECT params FROM jos_modules WHERE module='mod_svgmenu';";

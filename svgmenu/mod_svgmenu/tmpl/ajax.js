@@ -119,11 +119,8 @@ var BrowserDetect = {
 
 top.ajax = ajax;
 
-
-
 // Función que se llama cada vez que se pulsa una de las imágenes
 // y genera la siguiente capa del menú
-
 function ajax(id, layer,pages,page)
 {
   //alert( "id:" + id + "\nlayer:" + layer + "\npages:" + pages + "\npage:" + page);
@@ -145,6 +142,10 @@ function ajax(id, layer,pages,page)
 			  parent.document.getElementById("main").style.visibility = "hidden";
 			  parent.document.getElementById("capa"+layer).style.visibility = "hidden";
 			  parent.document.getElementById("capa"+layer).innerHTML=ajax.responseText;
+        
+        parent.currentLevel = layer;
+        parent.loaded = 10;
+        parent.svgLoaded();
 
 			  for(i=layer+1;i<=4&&layer<3;i++)
 			     parent.document.getElementById("capa"+i).style.visibility = "hidden";
@@ -166,6 +167,8 @@ function upLevel(layer)
     parent.document.getElementById("main").style.visibility = "visible";
     parent.document.getElementById("mainheader").style.visibility = "visible";
   }
+
+  parent.currentLevel = layer-1;
 }
 
 function moreLevel(id, layer, pages, page)
@@ -183,10 +186,10 @@ function showLevel(layer)
 {
  // alert("layer: " + layer);
   parent.document.getElementById("capa"+layer).style.height = "";
-  parent.document.getElementById("capa"+layer).style.visibility = "visible";
+  //parent.document.getElementById("capa"+layer).style.visibility = "visible";
  
-  new Effect.Opacity("capa"+layer, { duration: 1.0, transition:
-      Effect.Transitions.linear, from: 0, to: 1});
+  //new Effect.Opacity("capa"+layer, { duration: 1.0, transition:
+  //    Effect.Transitions.linear, from: 0, to: 1});
 }
 
 // Función para crear un objeto de tipo AJAX

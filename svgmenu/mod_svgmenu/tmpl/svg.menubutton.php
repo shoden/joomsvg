@@ -24,19 +24,23 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     id="blue_button"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'"
+    onload=\'parent.svgLoaded()\'
     >
-<a onclick=\''. $action .'\'>
+<a onclick=\'init(evt)\'>
 <g role="button" cursor="pointer">';
 
 // Link script
 echo '<script type="application/ecmascript"> <![CDATA[';
 include("ajax.js");
-echo'    function go(url) { 
+echo'
+  function go(url) { 
 		parent.location.href = url;
 	}
-  
   function changeBg(){
     document.getElementById("bg").setAttributeNS(null,"fill","'.$bg.'");
+  }
+  function init(evt){
+    '. $action .';
   }
   ]]> </script>';
 
@@ -52,8 +56,8 @@ if( file_exists($buttonFile) )
 echo '<g id="text">
 			<text font-family="Verdana" font-size="'. $_GET["ts"].'" 
 			fill="black" content-value="'. $_GET["t"].'"
-         style="dominant-baseline: central; text-anchor:middle;">'
-         . $_GET["t"].'</text></g>';
+      style="dominant-baseline: central; text-anchor:middle;">'
+      . $_GET["t"].'</text></g>';
 
 // Icon
 $iconFile = '../../../images/stories/'. $_GET["i"];
@@ -64,8 +68,10 @@ if( file_exists($iconFile) )
 echo '</defs>';
 
 // Background color
-echo '<g><rect id="bg" name="bg" fill-rule="evenodd" clip-rule="evenodd" 
-	     fill="'.$paintbg.'" width="100%" height="100%"/></g>';
+if(isset($_GET['paintbg']))
+  echo '<g><rect id="bg" name="bg" fill="'.$paintbg.'" width="100%" height="100%"/></g>';
+else
+  echo '<g><rect id="bg" name="bg" fill="'.$paintbg.'" style="display:none" width="100%" height="100%"/></g>';
 	     
 // Render elements
 echo '<use id="button1" xlink:href="#button" x="'.($width-90)/2 .'" y="0"/>';
