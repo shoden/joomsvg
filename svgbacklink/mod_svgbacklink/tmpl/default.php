@@ -14,7 +14,7 @@
         <param name="wmode" value="transparent">
         </object>
         ';
-	
+
 	echo $svg;
 
 ?>
