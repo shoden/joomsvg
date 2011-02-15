@@ -5,7 +5,7 @@
 <author>CPMTI</author>
 <authorEmail></authorEmail>	  
 <authorUrl>CPMTI.es</authorUrl>
-<version>0.2.1</version>
+<version>0.2.2</version>
 <description>Scalable template with 16:9 aspect ratio</description>
 	<files>
     <filename>index.php</filename>
@@ -15,9 +15,18 @@
     <filename>css/safari.css</filename>
     <filename>template_thumbnail.png</filename>
     <filename>templateDetails.xml</filename>
+    <filename>js/builder.js</filename>
+    <filename>js/controls.js</filename>
+    <filename>js/dragdrop.js</filename>
+    <filename>js/effects.js</filename>
     <filename>js/funciones.js</filename>
-    <filename>js/jquery-1.4.2.min.js</filename>
     <filename>js/index.html</filename>
+    <filename>js/jquery-1.4.2.min.js</filename>
+    <filename>js/prototype.js</filename>
+    <filename>js/scriptaculous.js</filename>
+    <filename>js/slider.js</filename>
+    <filename>js/sound.js</filename>
+    <filename>js/unittest.js</filename>
     <filename>images/transp1.png</filename>
     <filename>images/transp2.png</filename>
     <filename>images/fondoB.jpg</filename>

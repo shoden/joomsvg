@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="templates/system/css/general.css" type="text/css" />	
     <link rel="shortcut icon" href="<?php echo $this->baseurl ?>/images/favicon.ico" /> 
     <script type="text/javascript" src="templates/scalable/js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="templates/scalable/js/prototype.js"></script>
+    <script type="text/javascript" src="templates/scalable/js/scriptaculous.js"></script>	
     <script type="text/javascript" src="templates/scalable/js/funciones.js"></script>		
   </head>
   <body onResize="resolucion()" onload="inicio()" id="body">
+  <a onclick="magia()" href="#">aa</a>
+  <div id="pego">pegolete</div>
     <div id="container" class="container">
       <div id="fondoA" class="fondoA" >
         <div id="fondoB" class="fondoB" >

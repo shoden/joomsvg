@@ -1,3 +1,16 @@
+var loaded = 0;
+var currentLevel = 0;
+
+function svgLoaded()
+{
+  loaded = loaded + 1;
+  if(loaded==11){
+    document.getElementById("capa"+currentLevel).style.visibility = "visible";
+   // alert("nivel " + currentLevel + " preparado");
+    loaded=0;
+  }
+}
+
 function resolucion()
 {
   var ancho = $(window).width();
@@ -145,6 +158,12 @@ var BrowserDetect = {
 		}
 	]
 };
+
+function magia()
+{
+  new Effect.Opacity('pego', { from: 1.0, to: 0.2, duration: 0.5 });
+ // $('pego').fade({ duration: 3.0, from: 0, to: 1 });
+}
 
 function inicio()
 {
