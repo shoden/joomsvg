@@ -1,4 +1,6 @@
 <?php defined('_JEXEC') or die('Restricted access'); // no direct access ?>
+<?php if($showlink){ ?>
+
 <div id="<?php echo $svgdiv; ?>">
 <?php
 
@@ -17,3 +19,4 @@
 
 ?>
 </div>
+<?php } ?>

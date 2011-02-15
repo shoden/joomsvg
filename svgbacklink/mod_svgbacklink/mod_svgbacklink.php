@@ -11,7 +11,9 @@ $svgimg = $params->get('svgimg');
 $svgsize = $params->get('svgsize');
 $svgwidth = $params->get('svgwidth');
 $svgheight = $params->get('svgheight');
- 
+
+$showlink = !(ModSvgBackLinkHelper::isFrontPage());
+
 // include the template for display
 require(JModuleHelper::getLayoutPath('mod_svgbacklink'));
 ?>
