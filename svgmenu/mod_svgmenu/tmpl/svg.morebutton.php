@@ -25,16 +25,15 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     id="button-more"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'"
-    onload="init(evt)">';
+    onload="showLevel('.$layer.')">';
 if($enabled) echo '<a onclick="'. $action .'">';
 echo '<g '. $role .' style="opacity: '. $opacity .'">';
 
 echo '<script type="application/ecmascript"> <![CDATA[';
 include("ajax.js");
-echo 'function changeBg(){
-        document.getElementById("bg").setAttributeNS(null,"fill","'.$bg.'");
-      }
-      function init(evt){ showLevel('.$layer.'); parent.svgLoaded(); }';
+echo'function changeBg(){
+    document.getElementById("bg").setAttributeNS(null,"fill","'.$bg.'");
+  }';
 echo ' ]]> </script>';
 
 // Elements definition

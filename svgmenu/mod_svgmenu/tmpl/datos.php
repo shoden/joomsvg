@@ -71,7 +71,7 @@ if($num>0){
 	// Menu buttons
 	while(($row = mysql_fetch_row($res)) && ($i<4)){
 		$icontype = ($row[2]=="#") ? 0 : 1;
-		$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=".$iconwidth."&h=".$iconheight."&c=".$colors[$i++]."&t=".utf8_encode($row[1])."&i=".getImage($row[3])."&ts=".$iconfontsize."&blink=".$blink."&link=".urlencode($row[2])."&y=".$icontype."&id=".$row[0]."&l=".($layer+1) . "&pages=". $pages . "&bg=" . $bg;
+		$svg = "modules/mod_svgmenu/tmpl/svg.menubutton.php?w=".$iconwidth."&h=".$iconheight."&c=".$colors[$i++]."&t=".utf8_encode($row[1])."&i=".getImage($row[3])."&ts=".$iconfontsize."&blink=".$blink."&link=".urlencode($row[2]."&Itemid=".$row[0])."&y=".$icontype."&id=".$row[0]."&l=".($layer+1) . "&pages=". $pages . "&bg=" . $bg;
     if($paintbg)
       $svg = $svg . "&paintbg=1";
 		echo button($id++, $svg, $iconsize);

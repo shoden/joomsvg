@@ -20,7 +20,7 @@
 		    . "&h=" . $iconheight . "&c=" . $colors[$i] . "&t=" . 
 		    $items[$i]->name . "&i=" . $items[$i]->img . "&ts=" . 
 		    $iconfontsize . "&blink=" . urlencode(JURI::base()) ."&link=" . 
-		    urlencode($items[$i]->link) . "&y=" . $icontype . "&id=" . $items[$i]->id .
+		    urlencode($items[$i]->link . "&Itemid=". $items[$i]->id) . "&y=" . $icontype . "&id=" . $items[$i]->id .
 		    "&is=" . $iconsize . "&l=1&bg=" . $bg;
 	
 		echo button($i, $svg, $iconsize);

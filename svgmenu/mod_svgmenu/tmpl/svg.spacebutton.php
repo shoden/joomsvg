@@ -13,7 +13,7 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     id="space_button"
     x="0px" y="0px" width="100%" height="100%"
     viewBox="0 0 1 1"
-    onload=\'parent.svgLoaded()\'>';
+    >';
 
 // Background function
 echo '<script type="application/ecmascript"> <![CDATA[

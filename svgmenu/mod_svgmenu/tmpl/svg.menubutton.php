@@ -9,7 +9,10 @@ $layer = intval( (isset($_GET['l']))?$_GET['l']:1 );
 $pages = intval( (isset($_GET['pages']))?$_GET['pages']:1 );
 
 //$goto = $_GET['blink'] . rawurlencode(str_replace("%3F","?",$_GET['link']));
-$goto = $_GET['blink'] . "/" . str_replace("%3F","?", rawurlencode($_GET['link']));
+$goto = $_GET['blink'] . "/" . rawurlencode($_GET['link']);
+$goto = str_replace( "%3F", "?", $goto);
+$goto = str_replace( "%3D", "=", $goto);
+$goto = str_replace( "%26", "&", $goto);
 //$action = ($_GET["y"]==0) ? "openSubmenu(". $_GET['id'] .")" : "go(\"". $goto ."\")";
 $action = ($_GET["y"]==0) ? "ajax(". $_GET['id'] .", ".  $layer . " ,". $pages . ", 1)" : "go(\"". $goto ."\")";
 
@@ -22,6 +25,7 @@ echo '<svg xmlns="http://www.w3.org/2000/svg"
     xmlns:svg="http://www.w3.org/2000/svg"
     xml:space="preserve"
     id="blue_button"
+    externalResourcesRequired="true"
     width="100%" height="100%"
     viewBox="0 0 '.$width . ' '. $height .'"
     onload=\'parent.svgLoaded()\'
