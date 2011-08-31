@@ -68,6 +68,7 @@ CONFIGURACIÓN DEL ENLACE SVG
     . ID de la capa: ID de la capa HTML donde se generará el enlace SVG.
     . Posición: Posición de la plantilla donde se generará el enlace SVG.
 
+
 INSTALACIÓN DEL ENLACE SVG HACIA ATRÁS
 
 - Entrar en el backend de Joomla y hacer:
@@ -87,3 +88,8 @@ CONFIGURACIÓN DEL ENLACE SVG HACIA ATRÁS
     . Imagen: Imagen SVG. Debe estar en la carpeta de Joomla 'images/stories'.
     . ID de la capa: ID de la capa HTML donde se generará el enlace SVG.
     . Posición: Posición de la plantilla donde se generará el enlace SVG.
+
+
+MÁS INFORMACIÓN
+
+  https://github.com/shoden/joomsvg
